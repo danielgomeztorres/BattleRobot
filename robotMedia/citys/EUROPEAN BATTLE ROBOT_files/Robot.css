@@ -1,0 +1,398 @@
+body {
+	height: 100vh;
+	color: white;
+}
+
+.flexboxHeader {
+	margin-top: 10px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.spanTitle {
+	color: red;
+}
+
+.title {
+	border-radius: 25px;
+	font-family: 'Orbitron', sans-serif;
+	font-size: 15px;
+	display: flex;
+	justify-content: center;
+	align-items: baseline;
+	color: white;
+}
+.title1 {
+		font-family: 'Orbitron', sans-serif;
+font-size: 19px;
+}
+.subTitle {
+	display: flex;
+	justify-content: center;
+	text-decoration: underline;
+	text-decoration-color: red;
+	font-family: 'Audiowide', cursive;
+	margin: auto;
+	margin-bottom: 2%;
+
+}
+
+.background {
+	background-image: url(robotMedia/black-background-fondo.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100%;
+	background-attachment: fixed;
+}
+
+.flexboxMain {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	margin-top: 40px;
+}
+
+.flexboxChild {
+	height: 100%;
+	width: 100%;
+}
+
+.sizePictures {
+	background-size: contain;
+	width: 950px;
+	height: 370px;
+}
+
+.infoEvent {
+	background-image: url(robotMedia/Night-View-Of-The-Torre-Agbar-In-Barcelona.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	height: 370px;
+	border-radius: 25px;
+}
+
+.footer {
+	background-color: red;
+	padding-bottom: 15px;
+	position: fixed;
+	left: -2px;
+	width: 100%;
+	bottom: 0;
+}
+
+/*//////////////////////MENU///////////////*/
+/*OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO*/
+.hamburger {
+	background-color: #ffffff4a;
+	width: 60px;
+	height: 45px;
+	border-radius: 25%;
+	position: fixed;
+}
+
+a {
+	text-decoration: none;
+	color: #232323;
+	transition: color 0.3s ease;
+}
+
+a:hover {
+	color: tomato;
+}
+
+#menuToggle {
+	display: block;
+	position: fixed;
+	z-index: 1;
+	-webkit-user-select: none;
+	user-select: none;
+}
+
+#menuToggle input {
+	display: block;
+	width: 40px;
+	height: 32px;
+	position: absolute;
+	top: -7px;
+	left: -5px;
+	cursor: pointer;
+	opacity: 0;
+	/* hide this */
+	z-index: 1;
+	/* and place it over the hamburger */
+	-webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span {
+	display: block;
+	width: 45px;
+	height: 6px;
+	margin-bottom: 5px;
+	position: relative;
+	background: red;
+	border-radius: 15px;
+	z-index: 1;
+	transform-origin: 4px 0px;
+	transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+		background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+		opacity 0.55s ease;
+}
+
+#menuToggle span:first-child {
+	transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+	transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span {
+	opacity: 1;
+	transform: rotate(45deg) translate(-2px, -1px);
+	background: red;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3) {
+	opacity: 0;
+	transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2) {
+	transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu {
+	position: absolute;
+	width: 300px;
+	margin: -60px 0 0 -65px;
+	padding: 70px;
+	padding-top: 70px;
+	background: #ededed;
+	list-style-type: none;
+	transform-origin: 0% 0%;
+	transform: translate(-100%, 0);
+	transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
+
+#menu li {
+	padding: 3px 0;
+	font-size: 22px;
+}
+
+/*
+ * And let's slide it in from the left
+ */
+#menuToggle input:checked ~ ul {
+	transform: none;
+}
+
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*CARDS TEAM*/
+.buttonTeam {
+
+	border: none;
+	outline: 0;
+	border-radius: 50px;
+	display: inline-block;
+	padding: 20px;
+	color: white;
+	background-color: #000;
+	text-align: center;
+	cursor: pointer;
+	width: 50%;
+	font-size: 18px;
+}
+
+
+html,
+section {
+	width: 100%;
+	height: 100%;
+}
+
+.card {
+	display: flex;
+	min-width: 100%;
+	min-height: 200px;
+	overflow-x: auto;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	min-width: 0;
+	word-wrap: break-word;
+	background-color: position: relative;
+	display: flex;
+	flex-direction: column;
+	min-width: 0;
+	word-wrap: break-word;
+	background-color: #ffffff26;
+	background-clip: border-box;
+	border: $card-border-width solid $card-border-color;
+	@include border-radius($card-border-radius);
+	;
+	background-clip: border-box;
+	border: $card-border-width solid $card-border-color;
+	@include border-radius($card-border-radius);
+}
+
+.card::-webkit-scrollbar {
+	display: none;
+}
+
+.card--content {
+	background-color: #e74c3c;
+	min-width: 300px;
+	margin: 5px;
+	box-shadow: 3px 5px rgba(255, 255, 255, 0.05);
+}
+
+.card--content img {
+	width: 100%;
+	height: 100%;
+}
+
+/*//////////////////////CARD EVENT HOMEPAGE///////////////*/
+/*OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO*/
+.card {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	max-width: 100%;
+	margin: 5%;
+	text-align: center;
+	font-family: arial;
+	border-radius: 10%;
+}
+
+.buttonTicket {
+	border: none;
+	outline: 0;
+	border-radius: 50px;
+	display: inline-block;
+	padding: 20px;
+	color: white;
+	background-color: #000;
+	text-align: center;
+	cursor: pointer;
+	width: 50%;
+	font-size: 18px;
+}
+
+a {
+	text-decoration: none;
+	font-size: 22px;
+	color: black;
+}
+
+button:hover,
+a:hover {
+	opacity: 0.7;
+}
+
+/*//////////////////////TABLE///////////////*/
+/*OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO*/
+
+
+
+
+.table {
+	color: white;
+	width: 100%;
+
+}
+
+.tableTd {
+	padding: 4%;
+}
+
+.tableTh {
+	background-color: black;
+}
+.trColor {
+	background-color: #ffffff26;
+}
+
+/*//////////////////////BUTTON HOME///////////////*/
+/*OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO*/
+
+
+.buttonHome {
+	background-color: red;
+	color: white;
+	padding: 25px;
+	border-radius: 25%;
+
+}
+
+.flexButtonHome {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	margin-top: 5%;
+
+}
+
+/*//////////////////////RESULTS///////////////*/
+/*OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO*/
+
+.cityImg {
+	margin-right: 3%;
+	border-radius: 50%;
+	background-image: url(robotMedia/citys/sagrada-familia_barcellona.jpg);
+	border-style: solid;
+	border-bottom-color: white;
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 100px;
+	width: 100px;
+}
+
+.resultCity {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	align-items: center;
+	background-color: #100e0ed6;
+	border-radius: 25px;
+}
+.vs {
+	display: flex;
+	justify-content: center;
+	text-decoration: underline;
+	text-decoration-color: red;
+	font-family: 'Audiowide', cursive;
+	margin: auto;
+}
+.resultTable {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	margin; 10%;
+		background-color: #ffffff26;
+	border-radius: 25px;
+}
+.resultTableChild {
+	margin-bottom: 10%;
+}
+/*//////////////////////TICKET///////////////*/
+/*OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO*/
+.tableTicket {
+	padding-right: 150px;
+}
