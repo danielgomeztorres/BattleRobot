@@ -1,0 +1,6 @@
+@font-face {
+  font-family: 'Audiowide';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/audiowide/v6/l7gdbjpo0cum0ckerWCdlg_LMRlABg.ttf) format('truetype');
+}

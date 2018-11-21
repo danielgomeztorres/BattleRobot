@@ -1,0 +1,190 @@
+ {
+ 	"robotLeague": [
+ 		{
+ 			"teams": [
+ 				{
+ 					"id": "1",
+ 					"nameRobot": "Bronco",
+ 					"type": "Hammer",
+ 					"team": "Andiamo Labs",
+ 					"hometown": "Italy",
+ 					"ingBuilder": "Antonelli Limoncello Martini",
+ 					"years_competing": "2 years",
+ 					"favourite_tool": "laser",
+ 					"battery": "16v",
+ 					"numberEvents": 4,
+ 					"win": 3,
+ 					"lost": 1,
+ 					"imgteam": "https://battlebots.com/wp-content/uploads/2018/05/Bronco-Team-S2018-1140x760.jpg",
+ 					"imgrobot": "https://battlebots.com/wp-content/uploads/2018/05/Bronco-Bot-S2018-1140x763.jpg"
+ 				},
+ 				{
+ 					"id": "2",
+ 					"nameRobot": "Overhaul",
+ 					"type": "Grappler",
+ 					"team": "Tec Jamon",
+ 					"hometown": "Spain",
+ 					"ingBuilder": "Pepito De Los Palotes",
+ 					"years_competing": "3",
+ 					"favourite_tool": "Abrasive waterjet",
+ 					"battery": "18v",
+ 					"numberEvents": 4,
+ 					"win": 2,
+ 					"lost": 2,
+ 					"imgteam": "https://battlebots.com/wp-content/uploads/2018/05/Overhaul-Team-S2018-1140x760.jpg",
+ 					"imgrobot": "https://battlebots.com/wp-content/uploads/2018/05/Overhaul-Bot-S2018-1140x760.jpg"
+ 				},
+ 				{
+ 					"id": "3",
+ 					"nameRobot": "Red Devil",
+ 					"type": "Grappler",
+ 					"team": "All Black Robotics",
+ 					"hometown": "Deutschland",
+ 					"ingBuilder": "Jzhoep Jagermeister",
+ 					"years_competing": "1",
+ 					"favourite_tool": "Plasma Torch",
+ 					"battery": "15v",
+ 					"numberEvents": 4,
+ 					"win": 2,
+ 					"lost": 2,
+ 					"imgteam": "https://battlebots.com/wp-content/uploads/2018/04/Red-Devil-Team-S2011-1140x760.jpg",
+ 					"imgrobot": "https://battlebots.com/wp-content/uploads/2018/04/Red-Devil-Bot-S2018-1140x863.jpg"
+ 				},
+ 				{
+ 					"id": "4",
+ 					"nameRobot": "Warhead",
+ 					"type": "Disc spinner",
+ 					"team": "University Fresh",
+ 					"hometown": "Norway",
+ 					"ingBuilder": "Salmon J.Salmon",
+ 					"years_competing": "4",
+ 					"favourite_tool": "Bridgeport Mill",
+ 					"battery": "16v",
+ 					"numberEvents": 3,
+ 					"win": 2,
+ 					"lost": 1,
+ 					"imgteam": "https://battlebots.com/wp-content/uploads/2018/05/Warhead-Team-S2018-1140x760.jpg",
+ 					"imgrobot": "https://battlebots.com/wp-content/uploads/2018/05/Warhead-2-Bot-S2018-1140x760.jpg"
+ 				},
+ 				{
+ 					"id": "5",
+ 					"nameRobot": "HyperShock",
+ 					"type": "Drum spinner",
+ 					"team": "London Robots",
+ 					"hometown": "U.K",
+ 					"ingBuilder": "Jhon Balconing",
+ 					"years_competing": "4",
+ 					"favourite_tool": "Band Saw",
+ 					"battery": "17v",
+ 					"numberEvents": 2,
+ 					"win": 1,
+ 					"lost": 1,
+ 					"imgteam": "https://battlebots.com/wp-content/uploads/2018/04/hypershock_team-1-1140x760.jpg",
+ 					"imgrobot": "https://battlebots.com/wp-content/uploads/2018/04/Hypershock-Bot-S2018-1140x760.jpg"
+ 				},
+ 				{
+ 					"id": "6",
+ 					"nameRobot": "SawBlaze",
+ 					"type": "Saw bot",
+ 					"team": "Tec Chesse",
+ 					"hometown": "France",
+ 					"ingBuilder": "Perrie de Champagne",
+ 					"years_competing": "1",
+ 					"favourite_tool": "Bridgeport Mill",
+ 					"battery": "16v",
+ 					"numberEvents": 3,
+ 					"win": 0,
+ 					"lost": 3,
+ 					"imgteam": "https://battlebots.com/wp-content/uploads/2018/04/SawBlaze-Team-S2018-1140x888.jpg",
+ 					"imgrobot": "https://battlebots.com/wp-content/uploads/2018/04/SawBlaze-Bot-S2018-1140x859.jpg"
+ 				}
+ 			],
+ 			"matchs": [
+ 				{
+ 					"id": "1",
+ 					"game": [{
+ 							"game1": "Bronco vs Overhaul",
+ 							"resultgame1": "1 | 0",
+ 							"game2": "Red-Devil vs Warhead",
+ 							"resultgame2": "0 | 1",
+ 							"game3": " vs ",
+ 							"resultgame3": " | "
+							   }
+					],
+ 					"city": "Munich",
+ 					"imgcity": "https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/03/23/13/munich-alamy.jpg",
+ 					"date": "25 Agosto 17:00"
+		},
+ 				{
+ 					"id": "2",
+ 					"game": [{
+ 							"game1": "Bronco vs Red-Devil",
+ 							"resultgame1": "0 | 1",
+ 							"game2": "Overhaul vs HyperShock",
+ 							"resultgame2": "1 | 0",
+ 							"game3": "SawBlaze vs Warhead",
+ 							"resultgame3": "0 | 1"
+							   }
+					],
+ 					"city": "Paris",
+ 					"imgcity": "https://cdn-image.travelandleisure.com/sites/default/files/styles/1600x1000/public/1508524504/paris-ROOFTOP1017.jpg?itok=arOAqg7r",
+ 					"date": "29 September 18:30"
+		},
+ 				{
+ 					"id": "3",
+ 					"game": [{
+ 							"game1": "Bronco vs Warhead",
+ 							"resultgame1": "1 | 0",
+ 							"game2": "Red-Devil vs Overhaul",
+ 							"resultgame2": "1 | 0",
+ 							"game3": "SawBlaze vs HyperShock",
+ 							"resultgame3": "0 | 1"
+							   }
+					],
+ 					"city": "Oslo",
+ 					"imgcity": "https://www.holidayguru.ie/wp-content/uploads/2017/03/Bj%C3%B8rvika-Barcode-in-Oslo-Norwegen-iStock-494086312-2-960x332.jpg",
+ 					"date": "27 October 15:00"
+		},
+ 				{
+ 					"id": "4",
+ 					"game": [{
+ 							"game1": "SawBlaze vs Overhaul",
+ 							"resultgame1": "0 | 1",
+ 							"game2": "Red-Devil vs Bronco",
+ 							"resultgame2": "0 | 1",
+ 							"game3": " vs ",
+ 							"resultgame3": " | "
+							   }
+					],
+ 					"city": "Amsterdam",
+ 					"imgcity": "https://d79ba6b4f4fa822b580c3352-idjzrfz.netdna-ssl.com/wp-content/uploads/2016/12/Amsterdam-City-Tour-14.jpg",
+ 					"date": "24 November 16:00"
+		},
+ 				{
+ 					"id": "5",
+ 					"game": [{
+ 							"game1": "HyperShock vs Bronco",
+ 							"resultgame1": "- | -",
+ 							"game2": "Red-Devil vs Overhaul",
+ 							"resultgame2": "- | -",
+ 							"game3": "SawBlaze vs Warhead",
+ 							"resultgame3": " | "
+							   }
+					],
+ 					"city": "Barcelona",
+ 					"imgcity": "https://www.livingtours.com/media/catalog/product/cache/2/image/830x545/17f82f742ffe127f42dca9de82fb58b1/s/a/sagrada-familia-tour_2.jpg",
+ 					"date": "15 December 18:00"
+		}
+			],
+ 			"price": [
+ 				{
+ 					"Adult1Grandstand": "35 €",
+ 					"Adult2Grandstand": "26 €",
+ 					"Child1Grandstand": "20 €",
+ 					"Child2Grandstand": "14 €",
+ 					"child": "Free"
+				}
+			]
+ 	}
+ 			]
+ }

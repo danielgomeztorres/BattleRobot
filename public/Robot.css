@@ -69,16 +69,22 @@ color: black;
 	text-decoration: underline;
 	text-decoration-color: red;
 }
+
+
 .buttonLogin {
+	
 	outline: 0;
 	border-radius: 50px;
 	display: inline-block;
+	
 	color: white;
 	background-color: red;
 	text-align: center;
 	cursor: pointer;
+	
 	font-size: 18px;
 }
+
 .subTitle {
 	display: flex;
 	justify-content: center;
@@ -192,12 +198,15 @@ a:hover {
 #menu a {
   display: block;
 }
+
 /*
  * And let's slide it in from the left
  */
+
 #menuToggle input:checked ~ ul {
 	transform:translateX(20px);
 }
+
 .buttonTeam {
 	border: none;
 	outline: 0;
@@ -211,6 +220,8 @@ a:hover {
 	width: 50%;
 	font-size: 18px;
 }
+
+
 /*//////////////////////MENU///////////////*/
 /*OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO*/
 .card {
@@ -247,10 +258,12 @@ a:hover {
 #menuToggle input:checked ~ ul {
 	transform:translateX(20px);
 }
+
 }
 /*//////////////////////EACHTEAM///////////////*/
 /*OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO*/
 .cardTeamImg {
+	
 	background-size: cover;
 	width: 100%;
 	height: 250px;
@@ -327,6 +340,7 @@ a:hover {
 .tableTd {
 	padding: 4%;
 	text-align: center;
+	
 }
 .tableTd2 {
 	background-image: url(robotMedia/medallasoro.png);
@@ -370,10 +384,12 @@ a:hover {
 		margin-top: 5px;
     justify-content: space-around;
     flex-wrap: wrap;
+    
 }
 .cityImg {
 	margin-right: 3%;
 	border-radius: 50%;
+	
 	border-style: solid;
 	border-bottom-color: white;
 	background-size: cover;
@@ -386,8 +402,16 @@ a:hover {
 	justify-content: center;
 	flex-wrap: wrap;
 	align-items: center;
+	
 	border-radius: 25px;
 	margin-bottom: 2%;
+}
+.vs {
+	display: flex;
+	justify-content: center;
+	text-decoration: underline;
+	text-decoration-color: red;
+	font-family: 'Audiowide', cursive;
 }
 .buttonResult {
 	background-color: red;
@@ -415,6 +439,7 @@ a:hover {
 .cityImgPrevious {
 	margin-right: 3%;
 	border-radius: 50%;
+
 	border-style: solid;
 	border-bottom-color: white;
 	background-size: cover;
@@ -481,6 +506,7 @@ td {
 	border-radius: 25px;
 }
 .insideText {
+	
 }
 .box {
 	align-content: center;
@@ -490,18 +516,22 @@ td {
 	background-color: #000000bd;
 	width: 98%;
 	height: 400px;
+	
 }
 .chat {
 	margin: 10%;
+
 	display: flex;
 	justify-content:center;
 	flex-direction: column;
 	align-content: center;
+	
 }
 .inputs {
 	display: flex;
 	padding: 10%;
 }
+
 .input {
 	width: 100%;
 	padding: 15px;
@@ -513,6 +543,7 @@ margin-right: 5%;
 	color: white;
 	padding: 10px;
 	border-radius: 25%;
+
 	font-family: 'Audiowide', cursive;
 	margin-bottom: 4px;
 }
@@ -593,6 +624,7 @@ margin-right: 5%;
 		display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+	
 	}
 .tableTicket {
 	padding-right: 150px;
@@ -600,6 +632,7 @@ margin-right: 5%;
 	.buttonResult {
 	background-color: red;
 	color: white;
+	
 	border-radius: 25%;
 	font-family: 'Audiowide', cursive;
 	margin-bottom: 1px;
@@ -609,6 +642,7 @@ margin-right: 5%;
 		flex-direction: column-reverse;
     justify-content: space-around;
     flex-wrap: wrap;
+    
 }
 	.cardInfoRobot {
     display: flex;
