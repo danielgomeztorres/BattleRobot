@@ -5,7 +5,6 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>EUROPEAN BATTLE ROBOT</title>
-	<link rel="stylesheet" type="text/css" href="Robot.css">
 	<link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Orbitron:900" rel="stylesheet">
 	<link rel="shortcut icon" sizes="128x128" href="robotMedia/00ddb464-2546-4fc1-8c27-95de8a2dfce7.png">
@@ -14,9 +13,11 @@
 	<link rel="apple-touch-icon" sizes="76x76" href="robotMedia/00ddb464-2546-4fc1-8c27-95de8a2dfce7.png">
 	<link rel="apple-touch-icon" sizes="120x120" href="robotMedia/00ddb464-2546-4fc1-8c27-95de8a2dfce7.png">
 	<link rel="apple-touch-icon" sizes="152x152" href="robotMedia/00ddb464-2546-4fc1-8c27-95de8a2dfce7.png">
+	<!--	<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">-->
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<link rel="stylesheet" type="text/css" href="Robot.css">
 </head>
 
 <body class="background">
@@ -28,65 +29,68 @@
 			</div>
 			<header class="flexboxHeader">
 				<div>
+
 					<nav role="navigation">
 						<div id="menuToggle">
-<!--						-->
-							<input id="closeIcon" type="checkbox"/>
-							<span></span>
-							<span></span>
-							<span></span>
-							<ul id="menu">
-								<div>
-									<li>
-										<a  v-on:click="showElement('index1')">
-											HOME
-										</a>
-									</li>
-									<li>
-										<a v-on:click="showElement('information')">
-											INFO
-										</a>
-									</li>
-									<li>
-										<a v-on:click="showElement('results')">
-											RESULTS
-										</a>
-									</li>
-									<li>
-										<a v-on:click="showElement('table')">
-											TABLAS
-										</a>
-									</li>
-									<li>
-										<a v-on:click="showElement('teams')">
-											EQUIPOS
-										</a>
-									</li>
-									<li>
-										<a v-on:click="showElement('ticket')">
-											TICKETS
-										</a>
-									</li>
-									<li>
-										<a v-on:click="showElement('contact')" target="_blank">
-											CONTACT
-										</a>
-									</li>
-									<hr>
-									<li>
-										<a v-on:click="login">
-											LOGIN
-										</a>
-									</li>
-								</div>
-							</ul>
+							<!--						-->
+							<label id="closeIcon"><input type="checkbox" />
+								<span></span>
+								<span></span>
+								<span></span>
+
+								<ul id="menu">
+									<div>
+										<li>
+											<a v-on:click="showElement('index1')">
+												HOME
+											</a>
+										</li>
+										<li>
+											<a v-on:click="showElement('information')">
+												INFO
+											</a>
+										</li>
+										<li>
+											<a v-on:click="showElement('results')">
+												RESULTS
+											</a>
+										</li>
+										<li>
+											<a v-on:click="showElement('table')">
+												TABLAS
+											</a>
+										</li>
+										<li>
+											<a v-on:click="showElement('teams')">
+												EQUIPOS
+											</a>
+										</li>
+										<li>
+											<a v-on:click="showElement('ticket')">
+												TICKETS
+											</a>
+										</li>
+										<li>
+											<a v-on:click="showElement('contact')" target="_blank">
+												CONTACT
+											</a>
+										</li>
+										<hr>
+										<li>
+											<a v-on:click="login">
+												LOGIN
+											</a>
+										</li>
+									</div>
+								</ul>
+							</label>
 						</div>
 					</nav>
 				</div>
 				<div class="loginLogo">
 					<button v-show="login" id="login" class="buttonLogin" v-on:click="logins">LOGIN</button>
 					<button v-show="logout" id="logout" class="buttonLogin" v-on:click="logouts">LOGOUT</button>
-					<div></div>
+
 				</div>
 			</header>
 			<!--..............................................		INDEX-->
@@ -124,7 +128,12 @@
 			<!--..............................................		RESULT PREVIOUS-->
 			<div v-show="page == 'resultPrevious'">
 				<h2 class="subTitle">PREVIOUS</h2>
-				<main v-show="main"  v-for="(info, index) in arrayMatchs" class="flexboxMainResult">
+<!--
+				<button v-on:click="login"  class="noLogin" v-if="login">LOGIN TO SEE THE PREVIOUS RESULTS
+				</button>
+-->
+					 <button v-show="login" id="login" class="loginDiv" v-on:click="logins">LOGIN TO SEE THE PREVIOUS RESULTS</button>
+				<main v-if="!login" v-for="(info, index) in arrayMatchs" class="flexboxMainResult">
 					<h4 class="subTitle">{{info.id}} EVENT</h4>
 					<div class="resultCity">
 						<div>
@@ -137,14 +146,14 @@
 						</div>
 					</div>
 					<div class="resultTable">
-						<p>{{info.game[0].game1}}</p>
-						<p>{{info.game[0].resultgame1}}</p>
-					</div>
-					<div class="resultTable">
+						<p class="resultTableChild">{{info.game[0].game1}}</p>
+						<p class="resultTableChild">{{info.game[0].resultgame1}}</p>
+
 						<p class="resultTableChild">{{info.game[0].game2}}</p>
 						<p class="resultTableChild">{{info.game[0].resultgame2}}</p>
 					</div>
 				</main>
+
 			</div>
 			<!--..............................................		RESULT-->
 			<div v-show="page == 'results'">
@@ -171,7 +180,7 @@
 						</div>
 					</div>
 					<div class="flexButtonHomeResult">
-						<a v-if="!login" v-on:click="showElement('resultPrevious')"><button class="buttonResult">PREVIOUS</button></a>
+						<a v-on:click="showElement('resultPrevious')"><button class="buttonResult">PREVIOUS</button></a>
 						<a v-on:click="showElement('chat')"><button class="buttonResult">CHAT</button></a>
 					</div>
 				</main>
@@ -205,10 +214,10 @@
 				<main v-for="info in infoTeams" class="mainTicket">
 					<div class="cardInfoRobot">
 						<h3 class="subTitle">{{info.nameRobot}}</h3>
-						<div>
+						
 							<img class="card" v-bind:src="info.imgrobot">
 
-						</div>
+						
 						<div>
 							<div class="childInfo">
 								<div class="centerInfo">
@@ -290,7 +299,7 @@
 				<h2 class="subTitle">CONTACT</h2>
 				<main class="flexboxMain">
 					<div>
-						
+
 						<div class="card">
 							<div>
 								<h3>Contact us:</h3>
@@ -307,7 +316,10 @@
 			<!--..............................................		CHAT-->
 			<div v-show="page == 'chat'">
 				<h2 class="subTitle">CHAT</h2>
-				<div class="chat">
+				<button class="loginDiv" v-if="login" v-on:click="logins">LOGIN TO SEE THE PREVIOUS RESULTS
+					 
+				</button>
+				<div v-if="!login" class="chat">
 					<div id="posts" class="box">
 						CHAT...
 					</div>

@@ -2,9 +2,15 @@ body {
 	height: 100vh;
 	color: white;
 	overflow:auto;
+	margin: 0px;
+	font-family: 'Audiowide', cursive;
+	
 }
 span {
 	margin-right: 1%;
+}
+h1 {
+	margin: 0px;
 }
 .spanLeter {
 	font-size: 20px;
@@ -41,6 +47,18 @@ span {
 .spanTitle {
 	color: red;
 }
+.noLogin {
+	background-image: linear-gradient(to top, red ,#9e0808, #680a0a, #2a0404);
+	    display: flex;
+    justify-content: center;
+	text-align: center;
+	margin: 32%;
+	margin-top: 30%;
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	background-image: linear-gradient(to top, red ,#9e0808, #680a0a, #2a0404);
+}
 .loginLogo {
 	display: flex;
 	flex-direction: row;
@@ -62,6 +80,8 @@ color: black;
  background-image: url(robotMedia/black-background-fondowhite.jpg);
     padding-top: 4px;
     padding-bottom: 4px;
+	border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
 }
 .title1 {
 	font-family: 'Orbitron', sans-serif;
@@ -69,22 +89,16 @@ color: black;
 	text-decoration: underline;
 	text-decoration-color: red;
 }
-
-
 .buttonLogin {
-	
 	outline: 0;
 	border-radius: 50px;
 	display: inline-block;
-	
 	color: white;
-	background-color: red;
+		background-image: linear-gradient(to top, red ,#9e0808, #680a0a, #2a0404);
 	text-align: center;
 	cursor: pointer;
-	
 	font-size: 18px;
 }
-
 .subTitle {
 	display: flex;
 	justify-content: center;
@@ -93,6 +107,21 @@ color: black;
 	font-family: 'Audiowide', cursive;
 	margin: auto;
 	margin-bottom: 2%;
+}
+.loginDiv {
+	color: white;
+	display: flex;
+	justify-content: center;
+	text-decoration: underline;
+	text-decoration-color: red;
+	font-family: 'Audiowide', cursive;
+	margin: auto;
+	margin-top: 25%;
+	margin-bottom: 2%;
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	background-image: linear-gradient(to top, red ,#9e0808, #680a0a, #2a0404);
 }
 /*//////////////////////MENU///////////////*/
 /*OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO*/
@@ -112,6 +141,13 @@ a:hover {
 	color: tomato;
 }
 #menuToggle {
+	background-color: #111;
+	margin-left: 4px;
+    padding-top: 10px;
+    padding-right: 5px;
+    padding-left: 5px;
+	padding-bottom: 5px;
+    border-radius: 50%;
 	display: block;
 	position: fixed;
 	z-index: 1;
@@ -184,11 +220,12 @@ a:hover {
 	margin: -40px 0 0 -65px;
 	padding: 70px;
 	padding-top: 70px;
-	background: #ededed;
+	background: #ffffffe0;
 	list-style-type: none;
 	transform-origin: 0% 0%;
 	transform: translate(-100%, 0);
 	transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+	overflow: scroll;
 }
 #menu li {
 	padding: 3px 0;
@@ -198,15 +235,12 @@ a:hover {
 #menu a {
   display: block;
 }
-
 /*
  * And let's slide it in from the left
  */
-
 #menuToggle input:checked ~ ul {
 	transform:translateX(20px);
 }
-
 .buttonTeam {
 	border: none;
 	outline: 0;
@@ -220,8 +254,6 @@ a:hover {
 	width: 50%;
 	font-size: 18px;
 }
-
-
 /*//////////////////////MENU///////////////*/
 /*OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO*/
 .card {
@@ -259,11 +291,9 @@ a:hover {
 	transform:translateX(20px);
 }
 
-}
 /*//////////////////////EACHTEAM///////////////*/
 /*OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO*/
 .cardTeamImg {
-	
 	background-size: cover;
 	width: 100%;
 	height: 250px;
@@ -290,6 +320,7 @@ a:hover {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	    align-items: center;
 	border-radius: 10%;
 	background-color: #ffffff26;
 }
@@ -316,7 +347,7 @@ a:hover {
 	display: inline-block;
 	padding: 15px;
 	color: white;
-	background-color: #000;
+	background-image: linear-gradient(to top, #111 ,#181818, #2c2a2a, #111);
 	text-align: center;
 	cursor: pointer;
 	width: 40%;
@@ -340,11 +371,8 @@ a:hover {
 .tableTd {
 	padding: 4%;
 	text-align: center;
-	
 }
-.tableTd2 {
-	background-image: url(robotMedia/medallasoro.png);
-}
+
 .tableTh {
 	background-color: black;
 	align-content: center;
@@ -357,14 +385,34 @@ a:hover {
 }
 /*//////////////////////BUTTON HOME///////////////*/
 /*OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO*/
-.buttonHome {
-	background-color: red;
+#buttonHome {
+	background-image: linear-gradient(to top, red ,#9e0808, #680a0a, #2a0404);
 	color: white;
-	padding: 25px;
-	border-radius: 25%;
 	font-family: 'Audiowide', cursive;
-	margin-bottom: 4px;
+
 }
+#buttonHome:before {
+	content: "";
+	position: absolute;
+	top: -25px;
+	left: 0;
+	width: 0;
+	height: 0;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-bottom: 25px solid red;
+  }
+ #buttonHome:after {
+	content: "";
+	position: absolute;
+	bottom: -25px;
+	left: 0;
+	width: 0;
+	height: 0;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-top: 25px solid red;
+  }
 .flexButtonHome {
 	display: flex;
 	justify-content: space-around;
@@ -384,37 +432,27 @@ a:hover {
 		margin-top: 5px;
     justify-content: space-around;
     flex-wrap: wrap;
-    
 }
 .cityImg {
-	margin-right: 3%;
+	margin-right: 10px;
 	border-radius: 50%;
-	
 	border-style: solid;
 	border-bottom-color: white;
 	background-size: cover;
 	background-repeat: no-repeat;
-	height: 100px;
-	width: 150px;
+	height: 130px;
+	width: 130px;
 }
 .resultCity {
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
 	align-items: center;
-	
 	border-radius: 25px;
 	margin-bottom: 2%;
 }
-.vs {
-	display: flex;
-	justify-content: center;
-	text-decoration: underline;
-	text-decoration-color: red;
-	font-family: 'Audiowide', cursive;
-}
 .buttonResult {
-	background-color: red;
+	background-image: linear-gradient(to top, red ,#9e0808, #680a0a, #2a0404);
 	color: white;
 	padding: 25px;
 	border-radius: 25%;
@@ -422,24 +460,20 @@ a:hover {
 	margin-bottom: 1px;
 }
 .resultTable {
+	font-family: 'Audiowide', cursive;
 	display: flex;
 	justify-content: space-evenly;
 	flex-direction: column;
 	align-items: center;
-	margin;
-	10%;
 	background-color: #ffffff26;
 	border-radius: 25px;
 }
-.resultTableChild {
-	margin-bottom: 10%;
-}
+
 /*//////////////////////PREVIOUS RESULT///////////////*/
 /*0000000000000000000000000000000000000000000000000000*/
 .cityImgPrevious {
 	margin-right: 3%;
 	border-radius: 50%;
-
 	border-style: solid;
 	border-bottom-color: white;
 	background-size: cover;
@@ -505,9 +539,7 @@ td {
 	margin-top: 10px;
 	border-radius: 25px;
 }
-.insideText {
-	
-}
+
 .box {
 	align-content: center;
 	overflow: scroll;
@@ -516,22 +548,18 @@ td {
 	background-color: #000000bd;
 	width: 98%;
 	height: 400px;
-	
 }
 .chat {
-	margin: 10%;
-
+	margin: 1%;
 	display: flex;
 	justify-content:center;
 	flex-direction: column;
 	align-content: center;
-	
 }
 .inputs {
 	display: flex;
 	padding: 10%;
 }
-
 .input {
 	width: 100%;
 	padding: 15px;
@@ -543,7 +571,6 @@ margin-right: 5%;
 	color: white;
 	padding: 10px;
 	border-radius: 25%;
-
 	font-family: 'Audiowide', cursive;
 	margin-bottom: 4px;
 }
@@ -600,7 +627,7 @@ margin-right: 5%;
 	flex-direction: column;
 	min-width: 0;
 	word-wrap: break-word;
-	background-color: position: relative;
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	min-width: 0;
@@ -624,7 +651,6 @@ margin-right: 5%;
 		display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	
 	}
 .tableTicket {
 	padding-right: 150px;
@@ -632,17 +658,15 @@ margin-right: 5%;
 	.buttonResult {
 	background-color: red;
 	color: white;
-	
 	border-radius: 25%;
 	font-family: 'Audiowide', cursive;
 	margin-bottom: 1px;
 }
 	.flexButtonHomeResult {
     display: flex;
-		flex-direction: column-reverse;
+	flex-direction: column-reverse;
     justify-content: space-around;
     flex-wrap: wrap;
-    
 }
 	.cardInfoRobot {
     display: flex;
@@ -660,4 +684,9 @@ margin-right: 5%;
 	p {
 		margin: 10px;
 	}
+	#menuToggle input:checked ~ span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #111;
+}
 }

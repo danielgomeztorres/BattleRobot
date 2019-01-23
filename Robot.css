@@ -2,9 +2,14 @@ body {
 	height: 100vh;
 	color: white;
 	overflow:auto;
+	margin: 0px;
+	font-family: 'Audiowide', cursive;	
 }
 span {
 	margin-right: 1%;
+}
+h1 {
+	margin: 0px;
 }
 .spanLeter {
 	font-size: 20px;
@@ -41,6 +46,18 @@ span {
 .spanTitle {
 	color: red;
 }
+.noLogin {
+	background-image: linear-gradient(to top, red ,#9e0808, #680a0a, #2a0404);
+	    display: flex;
+    justify-content: center;
+	text-align: center;
+	margin: 32%;
+	margin-top: 30%;
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	background-image: linear-gradient(to top, red ,#9e0808, #680a0a, #2a0404);
+}
 .loginLogo {
 	display: flex;
 	flex-direction: row;
@@ -62,6 +79,8 @@ color: black;
  background-image: url(robotMedia/black-background-fondowhite.jpg);
     padding-top: 4px;
     padding-bottom: 4px;
+	border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
 }
 .title1 {
 	font-family: 'Orbitron', sans-serif;
@@ -74,7 +93,7 @@ color: black;
 	border-radius: 50px;
 	display: inline-block;
 	color: white;
-	background-color: red;
+		background-image: linear-gradient(to top, red ,#9e0808, #680a0a, #2a0404);
 	text-align: center;
 	cursor: pointer;
 	font-size: 18px;
@@ -87,6 +106,21 @@ color: black;
 	font-family: 'Audiowide', cursive;
 	margin: auto;
 	margin-bottom: 2%;
+}
+.loginDiv {
+	color: white;
+	display: flex;
+	justify-content: center;
+	text-decoration: underline;
+	text-decoration-color: red;
+	font-family: 'Audiowide', cursive;
+	margin: auto;
+	margin-top: 25%;
+	margin-bottom: 2%;
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	background-image: linear-gradient(to top, red ,#9e0808, #680a0a, #2a0404);
 }
 /*//////////////////////MENU///////////////*/
 /*OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO*/
@@ -106,6 +140,12 @@ a:hover {
 	color: tomato;
 }
 #menuToggle {
+	background-color: #111;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+	padding-bottom: 5px;
+    border-radius: 50%;
 	display: block;
 	position: fixed;
 	z-index: 1;
@@ -178,11 +218,12 @@ a:hover {
 	margin: -40px 0 0 -65px;
 	padding: 70px;
 	padding-top: 70px;
-	background: #ededed;
+	background: #ffffffe0;
 	list-style-type: none;
 	transform-origin: 0% 0%;
 	transform: translate(-100%, 0);
 	transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+	overflow: scroll;
 }
 #menu li {
 	padding: 3px 0;
@@ -223,19 +264,7 @@ a:hover {
 	flex-direction: column;
 	min-width: 0;
 	word-wrap: break-word;
-	background-color: position: relative;
-	display: flex;
-	flex-direction: column;
-	min-width: 0;
-	word-wrap: break-word;
-	background-color: #ffffff26;
-	background-clip: border-box;
-	border: $card-border-width solid $card-border-color;
-	@include border-radius($card-border-radius);
-	;
-	background-clip: border-box;
-	border: $card-border-width solid $card-border-color;
-	@include border-radius($card-border-radius);
+	
 }
 .card::-webkit-scrollbar {
 	display: none;
@@ -247,7 +276,7 @@ a:hover {
 #menuToggle input:checked ~ ul {
 	transform:translateX(20px);
 }
-}
+
 /*//////////////////////EACHTEAM///////////////*/
 /*OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO*/
 .cardTeamImg {
@@ -277,6 +306,7 @@ a:hover {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	    align-items: center;
 	border-radius: 10%;
 	background-color: #ffffff26;
 }
@@ -303,7 +333,7 @@ a:hover {
 	display: inline-block;
 	padding: 15px;
 	color: white;
-	background-color: #000;
+	background-image: linear-gradient(to top, #111 ,#181818, #2c2a2a, #111);
 	text-align: center;
 	cursor: pointer;
 	width: 40%;
@@ -344,7 +374,7 @@ a:hover {
 /*//////////////////////BUTTON HOME///////////////*/
 /*OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO*/
 .buttonHome {
-	background-color: red;
+	background-image: linear-gradient(to top, red ,#9e0808, #680a0a, #2a0404);
 	color: white;
 	padding: 25px;
 	border-radius: 25%;
@@ -390,7 +420,7 @@ a:hover {
 	margin-bottom: 2%;
 }
 .buttonResult {
-	background-color: red;
+	background-image: linear-gradient(to top, red ,#9e0808, #680a0a, #2a0404);
 	color: white;
 	padding: 25px;
 	border-radius: 25%;
@@ -398,12 +428,11 @@ a:hover {
 	margin-bottom: 1px;
 }
 .resultTable {
+	font-family: 'Audiowide', cursive;
 	display: flex;
 	justify-content: space-evenly;
 	flex-direction: column;
 	align-items: center;
-	margin;
-	10%;
 	background-color: #ffffff26;
 	border-radius: 25px;
 }
@@ -439,7 +468,7 @@ a:hover {
 		flex-direction: column;
 		justify-content: space-around;
 		margin-top: 2%;
-	}
+}
 td {
 	margin: 5%;
 }
@@ -480,8 +509,6 @@ td {
 	margin-top: 10px;
 	border-radius: 25px;
 }
-.insideText {
-}
 .box {
 	align-content: center;
 	overflow: scroll;
@@ -492,7 +519,7 @@ td {
 	height: 400px;
 }
 .chat {
-	margin: 10%;
+	margin: 1%;
 	display: flex;
 	justify-content:center;
 	flex-direction: column;
@@ -578,7 +605,7 @@ margin-right: 5%;
 	background-clip: border-box;
 	border: $card-border-width solid $card-border-color;
 	@include border-radius($card-border-radius);
-	;
+	
 	background-clip: border-box;
 	border: $card-border-width solid $card-border-color;
 	@include border-radius($card-border-radius);
@@ -626,4 +653,9 @@ margin-right: 5%;
 	p {
 		margin: 10px;
 	}
+	#menuToggle input:checked ~ span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #111;
+}
 }
