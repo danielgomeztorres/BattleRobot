@@ -25,7 +25,7 @@
 		<div>
 			<div class="backgroundTitle">
 				<h1 class="title"><span class="spanTitle">EUROPE</span> <span>BATTLE</span><span class="spanTitle">ROBOT </span>
-					</h1>
+				</h1>
 			</div>
 			<header class="flexboxHeader">
 				<div>
@@ -95,7 +95,7 @@
 					<div class="flexboxChild">
 						<div v-for="info in robotLeague" class="card">
 							<h2 class="title1">NEXT EVENT: {{info.matchs[info.matchs.length - 1].city}}
-								<img class="indexImg"src="robotMedia/port-battlebots3.jpg" ></h2>
+								<img class="indexImg" src="robotMedia/port-battlebots3.jpg"></h2>
 							<p class="title1"> {{info.matchs[info.matchs.length - 1].id}} GAME OF BATTLE ROBOT </p>
 							<hr style="width:100%">
 							<p>{{info.matchs[info.matchs.length - 1].city}} | {{info.matchs[info.matchs.length - 1].date}}<a v-on:click="showElement('ticket')"><button
@@ -147,7 +147,7 @@
 					<div class="resultTable">
 						<p class="resultTableChild">{{info.game[0].game1}}</p>
 						<p class="resultTableChild">{{info.game[0].resultgame1}}</p>
-<br>
+						<br>
 						<p class="resultTableChild">{{info.game[0].game2}}</p>
 						<p class="resultTableChild">{{info.game[0].resultgame2}}</p>
 					</div>

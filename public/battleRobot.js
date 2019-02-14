@@ -11,7 +11,6 @@ var app = new Vue({
 		logout: false,
 		main: false
 
-
 	},
 	methods: {
 		fetchStart: function () {
@@ -23,11 +22,6 @@ var app = new Vue({
 				app.tableTeams = app.table();
 				app.arrayMatchs = app.matchs();
 				app.tableWin = app.calculateWin();
-
-				console.log(app.infoTeams);
-				console.log(app.tableTeams);
-				console.log(app.tableWin);
-				console.log(app.infoTeams);
 
 			})
 		},
@@ -50,23 +44,20 @@ var app = new Vue({
 			document.getElementById("closeIcon").checked = false
 
 		},
-	
+
 		//...........TEAMS NEW OBJECT.......//
 
-		table: function () { //.......METEMOS LOS TEAMS EN UNA ARRAY PARA GENERAR LA TABLA//
+		table: function () { //.......PUT  ALL TEAMS IN ARRAY//
 			var arrayTeams = [];
-
 			for (var i = 0; i < this.robotLeague[0].teams.length; i++) {
 				arrayTeams.push(this.robotLeague[0].teams[i]);
 			}
 
-
 			return arrayTeams;
 		},
-
 		//...........MATCHS NEW OBJECT.......//
 
-		matchs: function () { //.......METEMOS LOS TEAMS EN UNA ARRAY PARA GENERAR LA TABLA//
+		matchs: function () { //.......PUT  ALL MATCHS IN ARRAY//
 			var arrayMatchs = [];
 			for (var i = 0; i < this.robotLeague[0].matchs.length; i++) {
 				arrayMatchs.push(this.robotLeague[0].matchs[i]);
@@ -76,31 +67,25 @@ var app = new Vue({
 
 		//..........WIN RATE.............//
 
-		calculateWin: function () { //.........CALCULA EL RATE/WIN (DE LA ARRAY DONDE ESTAN LOS TEAMS)  Y LO METE EN UNA ARRAY
+		calculateWin: function () { //.........CALCULATED EL RATE/WIN 
 			var winRate = [];
-
 			for (var i = 0; i < this.tableTeams.length; i++) {
-				//				winRate.push(this.tableTeams[i].win / this.tableTeams[i].numberEvents * 100);
 				var round = this.tableTeams[i].win / this.tableTeams[i].numberEvents * 100;
 				winRate.push(this.tableTeams[i].winRate = round.toFixed(1));
-
 			}
-
 			return winRate;
 		},
 
 		//..........CHAT...........//
 
 		logins: function () {
-
 			var provider = new firebase.auth.GoogleAuthProvider();
-			// How to Log In
-			firebase.auth().signInWithPopup(provider).then(function(){
+
+			firebase.auth().signInWithPopup(provider).then(function () {
 				console.log("login");
 				app.login = false;
 				app.logout = true;
 			});
-			
 
 		},
 		logouts: function () {
@@ -108,14 +93,12 @@ var app = new Vue({
 				alert("Sign-out successful.")
 
 			}, function (error) {
-				// An error happened.
 
 			});
 			this.logout = false;
 			this.login = true;
 		},
 		writeNewPost: function () {
-
 			var textInput = document.getElementById("textInput").value;
 			var name = firebase.auth().currentUser.displayName;
 			var photo = firebase.auth().currentUser.photoURL;
@@ -123,15 +106,13 @@ var app = new Vue({
 				imgPhoto: photo,
 				textMessage: textInput,
 				username: name,
-
-
 			};
 			textInput = document.getElementById("textInput").value = "";
-			console.log(message);
-			// Get a key for a new Post.
+
+
 			firebase.database().ref('myChat').push(message);
-			//Write data
-			console.log("write");
+
+
 			this.getPosts();
 		},
 		getPosts: function () {
@@ -142,29 +123,18 @@ var app = new Vue({
 				for (var key in messages) {
 					var chatBox = document.createElement("div");
 					chatBox.setAttribute("class", "chatFlexbox");
-
-
 					var contend = messages[key];
-
 					var ImgUrl = contend.imgPhoto;
-
 					var userImg = document.createElement("img");
 					userImg.setAttribute("src", ImgUrl);
 					userImg.setAttribute("class", "userImg");
-
 					var userMsg = `${contend.username}: ${contend.textMessage}`;
-
-
-
 					chatBox.append(userImg, userMsg);
 					posts.append(chatBox);
-
-
 				}
 			})
-			console.log("getting posts");
-		}
 
+		}
 	},
 	computed: {
 		sorted_winrate() {
@@ -173,7 +143,6 @@ var app = new Vue({
 			});
 		}
 	},
-
 	created: function () {
 		this.fetchStart(),
 			this.getPosts(),
@@ -183,4 +152,3 @@ var app = new Vue({
 
 	}
 });
-
