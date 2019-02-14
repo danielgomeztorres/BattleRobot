@@ -1,10 +1,14 @@
+/* lila  #6E3667
+lila fuerte  #1A0315
+lima #88D317
+gris #535353 */
+
 body {
 	height: 100vh;
-	color: white;
+	color: #88D317;
 	overflow:auto;
 	margin: 0px;
-	font-family: 'Audiowide', cursive;
-	
+	font-family: 'Audiowide', cursive;	
 }
 span {
 	margin-right: 1%;
@@ -16,7 +20,7 @@ h1 {
 	font-size: 20px;
 }
 .background {
-	background-image: url(robotMedia/black-background-fondo.jpg);
+	background-image: linear-gradient(to top, #1A0315 ,#6E3667, #4b2046, #070507);
 	opacity: inherit;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -45,7 +49,7 @@ h1 {
 	justify-content: space-between;
 }
 .spanTitle {
-	color: red;
+	color: #6E3667;
 }
 .noLogin {
 	background-image: linear-gradient(to top, red ,#9e0808, #680a0a, #2a0404);
@@ -76,8 +80,8 @@ h1 {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-color: black;
- background-image: url(robotMedia/black-background-fondowhite.jpg);
+    color: #1A0315;
+ background-color: white;
     padding-top: 4px;
     padding-bottom: 4px;
 	border-bottom-left-radius: 50%;
@@ -87,14 +91,15 @@ color: black;
 	font-family: 'Orbitron', sans-serif;
 	font-size: 19px;
 	text-decoration: underline;
-	text-decoration-color: red;
+	text-decoration-color: #6E3667;
 }
 .buttonLogin {
 	outline: 0;
 	border-radius: 50px;
 	display: inline-block;
+	border: solid 1px #6E3667;
 	color: white;
-		background-image: linear-gradient(to top, red ,#9e0808, #680a0a, #2a0404);
+		background-image: linear-gradient(to top, #1A0315 ,#6E3667, #4b2046, #070507);
 	text-align: center;
 	cursor: pointer;
 	font-size: 18px;
@@ -103,28 +108,32 @@ color: black;
 	display: flex;
 	justify-content: center;
 	text-decoration: underline;
-	text-decoration-color: red;
+	text-decoration-color: #6E3667;
 	font-family: 'Audiowide', cursive;
+	font-size: x-large;
 	margin: auto;
 	margin-bottom: 2%;
 }
 .loginDiv {
 	color: white;
-	display: flex;
-	justify-content: center;
-	text-decoration: underline;
-	text-decoration-color: red;
-	font-family: 'Audiowide', cursive;
-	margin: auto;
-	margin-top: 25%;
-	margin-bottom: 2%;
-	width: 200px;
-	height: 200px;
-	border-radius: 50%;
-	background-image: linear-gradient(to top, red ,#9e0808, #680a0a, #2a0404);
+    display: flex;
+    justify-content: center;
+    text-decoration: underline;
+    text-decoration-color: #6E3667;
+    font-family: 'Audiowide', cursive;
+    margin: auto;
+    margin-top: 25%;
+    margin-bottom: 2%;
+    width: 200px;
+    height: 200px;
+    border: solid 2px #6E3667;
+    border-radius: 50%;
+    background-image: linear-gradient(to top, #1A0315 ,#6E3667, #4b2046, #2a0404);
 }
 /*//////////////////////MENU///////////////*/
 /*OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO*/
+
+
 .hamburger {
 	background-color: #ffffff4a;
 	width: 60px;
@@ -134,7 +143,7 @@ color: black;
 }
 a {
 	text-decoration: none;
-	color: #232323;
+	color: #6E3667;
 	transition: color 0.3s ease;
 }
 a:hover {
@@ -142,11 +151,11 @@ a:hover {
 }
 #menuToggle {
 	background-color: #111;
-	margin-left: 4px;
+	margin-left: 5px;
     padding-top: 10px;
-    padding-right: 5px;
-    padding-left: 5px;
-	padding-bottom: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+	padding-bottom: 10px;
     border-radius: 50%;
 	display: block;
 	position: fixed;
@@ -174,7 +183,8 @@ a:hover {
 	height: 5px;
 	margin-bottom: 5px;
 	position: relative;
-	background: red;
+	bottom: -2px;
+	background: #88D317;
 	border-radius: 15px;
 	z-index: 1;
 	transform-origin: 4px 0px;
@@ -195,7 +205,7 @@ a:hover {
 #menuToggle input:checked ~ span {
 	opacity: 1;
 	transform: rotate(45deg) translate(-2px, -1px);
-	background: red;
+	background: #88D317;
 }
 /*
  * But let's hide the middle one.
@@ -220,7 +230,7 @@ a:hover {
 	margin: -40px 0 0 -65px;
 	padding: 70px;
 	padding-top: 70px;
-	background: #ffffffe0;
+	background: #ffffff;
 	list-style-type: none;
 	transform-origin: 0% 0%;
 	transform: translate(-100%, 0);
@@ -242,12 +252,12 @@ a:hover {
 	transform:translateX(20px);
 }
 .buttonTeam {
-	border: none;
+	border: 1px solid white;
 	outline: 0;
 	border-radius: 50px;
 	display: inline-block;
 	padding: 20px;
-	color: white;
+	color: #88D317;
 	background-color: #000;
 	text-align: center;
 	cursor: pointer;
@@ -266,19 +276,7 @@ a:hover {
 	flex-direction: column;
 	min-width: 0;
 	word-wrap: break-word;
-	background-color: position: relative;
-	display: flex;
-	flex-direction: column;
-	min-width: 0;
-	word-wrap: break-word;
-	background-color: #ffffff26;
-	background-clip: border-box;
-	border: $card-border-width solid $card-border-color;
-	@include border-radius($card-border-radius);
-	;
-	background-clip: border-box;
-	border: $card-border-width solid $card-border-color;
-	@include border-radius($card-border-radius);
+	
 }
 .card::-webkit-scrollbar {
 	display: none;
@@ -324,29 +322,26 @@ a:hover {
 	border-radius: 10%;
 	background-color: #ffffff26;
 }
-.flexboxMainResult {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
-	margin-top: 2%;
-}
+
 /*//////////////////////CARD EVENT HOMEPAGE///////////////*/
 /*OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO*/
 .card {
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-	max-width: 100%;
-	text-align: center;
-	font-family: arial;
-	border-radius: 10%;
-	margin-bottom: 10px;
+	box-shadow: 0 12px 12px 0 #4d1146;
+    max-width: 100%;
+    text-align: center;
+    font-family: arial;
+    margin: 5px;
+    border-radius: 10%;
+    margin-bottom: 10px;
 }
 .buttonTicket {
-	border: none;
+	border: 1px solid white;
+	margin-top: 10px;
 	outline: 0;
 	border-radius: 50px;
 	display: inline-block;
 	padding: 15px;
-	color: white;
+	color: #88D317;
 	background-image: linear-gradient(to top, #111 ,#181818, #2c2a2a, #111);
 	text-align: center;
 	cursor: pointer;
@@ -372,7 +367,9 @@ a:hover {
 	padding: 4%;
 	text-align: center;
 }
-
+.tableTd2 {
+	background-image: url(robotMedia/medallasoro.png);
+}
 .tableTh {
 	background-color: black;
 	align-content: center;
@@ -385,34 +382,15 @@ a:hover {
 }
 /*//////////////////////BUTTON HOME///////////////*/
 /*OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO*/
-#buttonHome {
-	background-image: linear-gradient(to top, red ,#9e0808, #680a0a, #2a0404);
-	color: white;
-	font-family: 'Audiowide', cursive;
-
+.buttonHome {
+	background-image: linear-gradient(to top, #1A0315 ,#40203c, #4b2046, #070507);
+    color: white;
+    padding: 25px;
+    border: solid 1px #070507;
+    border-radius: 25%;
+    font-family: 'Audiowide', cursive;
+    margin-bottom: 1px;
 }
-#buttonHome:before {
-	content: "";
-	position: absolute;
-	top: -25px;
-	left: 0;
-	width: 0;
-	height: 0;
-	border-left: 50px solid transparent;
-	border-right: 50px solid transparent;
-	border-bottom: 25px solid red;
-  }
- #buttonHome:after {
-	content: "";
-	position: absolute;
-	bottom: -25px;
-	left: 0;
-	width: 0;
-	height: 0;
-	border-left: 50px solid transparent;
-	border-right: 50px solid transparent;
-	border-top: 25px solid red;
-  }
 .flexButtonHome {
 	display: flex;
 	justify-content: space-around;
@@ -425,7 +403,7 @@ a:hover {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	margin-top: 40px;
+	margin-top: 50px;
 }
 .flexButtonHomeResult {
     display: flex;
@@ -434,41 +412,56 @@ a:hover {
     flex-wrap: wrap;
 }
 .cityImg {
-	margin-right: 10px;
-	border-radius: 50%;
-	border-style: solid;
-	border-bottom-color: white;
-	background-size: cover;
-	background-repeat: no-repeat;
-	height: 130px;
-	width: 130px;
+	margin-right: 3%;
+    border-radius: 50%;
+    border-bottom-color: #6E3667;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 150px;
+    width: 150px;
+    border: solid 2px #6E3667;
 }
 .resultCity {
-	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
-	align-items: center;
-	border-radius: 25px;
-	margin-bottom: 2%;
+	
+    border-bottom: none;
+    
+    display: flex;
+    margin-left: 5px;
+    margin-right: 5px;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: #ffffff33;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    
 }
 .buttonResult {
-	background-image: linear-gradient(to top, red ,#9e0808, #680a0a, #2a0404);
-	color: white;
-	padding: 25px;
-	border-radius: 25%;
-	font-family: 'Audiowide', cursive;
-	margin-bottom: 1px;
+	background-image: linear-gradient(to top, #1A0315 ,#40203c, #4b2046, #070507);
+    color: white;
+    padding: 25px;
+    border: solid 1px #070507;
+    border-radius: 25%;
+    font-family: 'Audiowide', cursive;
+    margin-bottom: 1px;
 }
 .resultTable {
 	font-family: 'Audiowide', cursive;
-	display: flex;
-	justify-content: space-evenly;
-	flex-direction: column;
-	align-items: center;
-	background-color: #ffffff26;
-	border-radius: 25px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff26;
+   
+    margin-right: 5px;
+    margin-left: 5px;
+    border-bottom-left-radius: 25%;
+    border-bottom-right-radius: 25%
 }
-
+.resultTableChild {
+	margin-top: 0px;
+	margin-bottom: 2px;
+}
 /*//////////////////////PREVIOUS RESULT///////////////*/
 /*0000000000000000000000000000000000000000000000000000*/
 .cityImgPrevious {
@@ -498,7 +491,7 @@ a:hover {
 		flex-direction: column;
 		justify-content: space-around;
 		margin-top: 2%;
-	}
+}
 td {
 	margin: 5%;
 }
@@ -515,14 +508,16 @@ td {
 	flex-direction: column;
 	margin: 5%;
 	background-color: #ffffff26;
-	border-radius: 10%;
+	border-radius: 2%;
 	padding: 5%;
 	padding-left: 8%;
 }
 .spanInfo {
 	color: white;
-	text-decoration: none;
-	font-family: 'Audiowide', cursive;
+    text-decoration: none;
+    font-family: 'Audiowide', cursive;
+    display: flex;
+    justify-content: center;
 }
 /*//////////////////////CHAT///////////////*/
 /*OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO*/
@@ -539,7 +534,6 @@ td {
 	margin-top: 10px;
 	border-radius: 25px;
 }
-
 .box {
 	align-content: center;
 	overflow: scroll;
@@ -567,12 +561,13 @@ td {
 margin-right: 5%;
 }
 .buttonChat {
-	background-color: red;
-	color: white;
-	padding: 10px;
-	border-radius: 25%;
-	font-family: 'Audiowide', cursive;
-	margin-bottom: 4px;
+	background-color: #6E3667;
+    color: white;
+    border: solid 1px;
+    padding: 10px;
+    border-radius: 25%;
+    font-family: 'Audiowide', cursive;
+    margin-bottom: 4px;
 }
 /*0000000000000000000000000000000000000000000000000000000*/
 /*//////////////////////MEDIA QUERY///////////////*/
@@ -627,7 +622,7 @@ margin-right: 5%;
 	flex-direction: column;
 	min-width: 0;
 	word-wrap: break-word;
-	position: relative;
+	background-color: position: relative;
 	display: flex;
 	flex-direction: column;
 	min-width: 0;
@@ -636,7 +631,7 @@ margin-right: 5%;
 	background-clip: border-box;
 	border: $card-border-width solid $card-border-color;
 	@include border-radius($card-border-radius);
-	;
+	
 	background-clip: border-box;
 	border: $card-border-width solid $card-border-color;
 	@include border-radius($card-border-radius);
@@ -664,7 +659,7 @@ margin-right: 5%;
 }
 	.flexButtonHomeResult {
     display: flex;
-	flex-direction: column-reverse;
+		flex-direction: column-reverse;
     justify-content: space-around;
     flex-wrap: wrap;
 }

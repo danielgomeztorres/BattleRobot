@@ -23,13 +23,12 @@
 <body class="background">
 	<div id="app">
 		<div>
-
 			<div class="backgroundTitle">
-				<h1 class="title"><span class="spanTitle">EUROPE</span> <span>BATTLE</span><span class="spanTitle">ROBOT </span> <img class="logo" src="robotMedia/00ddb464-2546-4fc1-8c27-95de8a2dfce7.png"></h1>
+				<h1 class="title"><span class="spanTitle">EUROPE</span> <span>BATTLE</span><span class="spanTitle">ROBOT </span>
+					</h1>
 			</div>
 			<header class="flexboxHeader">
 				<div>
-
 					<nav role="navigation">
 						<div id="menuToggle">
 							<!--						-->
@@ -61,9 +60,7 @@
 											</a>
 										</li>
 										<li>
-											<a v-on:click="showElement('teams')">
-												EQUIPOS
-											</a>
+											<a v-on:click="showElement('teams')">EQUIPOS</a>
 										</li>
 										<li>
 											<a v-on:click="showElement('ticket')">
@@ -90,7 +87,6 @@
 				<div class="loginLogo">
 					<button v-show="login" id="login" class="buttonLogin" v-on:click="logins">LOGIN</button>
 					<button v-show="logout" id="logout" class="buttonLogin" v-on:click="logouts">LOGOUT</button>
-
 				</div>
 			</header>
 			<!--..............................................		INDEX-->
@@ -99,16 +95,17 @@
 					<div class="flexboxChild">
 						<div v-for="info in robotLeague" class="card">
 							<h2 class="title1">NEXT EVENT: {{info.matchs[info.matchs.length - 1].city}}
-								<img src="robotMedia/port-battlebots3.jpg" style="width:100%"></h2>
+								<img class="indexImg"src="robotMedia/port-battlebots3.jpg" ></h2>
 							<p class="title1"> {{info.matchs[info.matchs.length - 1].id}} GAME OF BATTLE ROBOT </p>
 							<hr style="width:100%">
-							<p>{{info.matchs[info.matchs.length - 1].city}} | {{info.matchs[info.matchs.length - 1].date}}<a v-on:click="showElement('ticket')"><button class="buttonTicket">TICKET</button></a> </p>
+							<p>{{info.matchs[info.matchs.length - 1].city}} | {{info.matchs[info.matchs.length - 1].date}}<a v-on:click="showElement('ticket')"><button
+									 class="buttonTicket">TICKET</button></a> </p>
 						</div>
 					</div>
 					<div class="flexButtonHome">
-						<a v-on:click="showElement('teams')"><button class="buttonHome">TEAMS</button></a>
-						<a v-on:click="showElement('results')"><button class="buttonHome">RESULT</button></a>
-						<a v-on:click="showElement('table')"><button class="buttonHome">TABLE</button></a>
+						<a v-on:click="showElement('teams')"><button type="button" class="buttonHome">TEAMS</button></a>
+						<a v-on:click="showElement('results')"><button type="button" class="buttonHome">RESULT</button></a>
+						<a v-on:click="showElement('table')"><button type="button" role="alert" class="buttonHome">TABLE</button></a>
 					</div>
 				</main>
 			</div>
@@ -117,22 +114,24 @@
 				<h2 class="subTitle">INFO</h2>
 				<main class="flexboxMain">
 					<ul class="flexboxInfo">
-						<li><span class="spanInfo">Matches:</span>
-							Matches are three minutes long. During a match, two robots do their best to destroy each other using whatever means available. The match begins by a series of lights that flash from yellow to green.</li>
+						<li><span class="spanTextWhite">Matches:</span>
+							Matches are three minutes long. During a match, two robots do their best to destroy each other using whatever
+							means available. The match begins by a series of lights that flash from yellow to green.</li>
 						<hr>
-						<li><span class="spanInfo">Arena:</span>
-							The BattleBox is a 48' x 48' square arena designed to protect the drivers, officials, and audience from flying shrapnel and charging bots. It was originally designed by Pete Lampertson. Pete is still overseeing the box with the help of Matt Neubauer. It has a steel floor and steel-framed walls and roof paneled with thick, bulletproof polycarbonate plastic. The teams bring their robots in through doorways, which are sealed after all humans have exited. The drivers control their machines from outside the sealed arena.</li>
+						<li><span class="spanTextWhite">Arena:</span>
+							The BattleBox is a 48' x 48' square arena designed to protect the drivers, officials, and audience from flying
+							shrapnel and charging bots. It was originally designed by Pete Lampertson. Pete is still overseeing the box with
+							the help of Matt Neubauer. It has a steel floor and steel-framed walls and roof paneled with thick, bulletproof
+							polycarbonate plastic. The teams bring their robots in through doorways, which are sealed after all humans have
+							exited. The drivers control their machines from outside the sealed arena.</li>
 					</ul>
 				</main>
 			</div>
 			<!--..............................................		RESULT PREVIOUS-->
 			<div v-show="page == 'resultPrevious'">
 				<h2 class="subTitle">PREVIOUS</h2>
-<!--
-				<button v-on:click="login"  class="noLogin" v-if="login">LOGIN TO SEE THE PREVIOUS RESULTS
-				</button>
--->
-					 <button v-show="login" id="login" class="loginDiv" v-on:click="logins">LOGIN TO SEE THE PREVIOUS RESULTS</button>
+
+				 <button v-show="login" id="login" class="loginDiv" v-on:click="logins">LOGIN TO SEE THE PREVIOUS RESULTS</button>
 				<main v-if="!login" v-for="(info, index) in arrayMatchs" class="flexboxMainResult">
 					<h4 class="subTitle">{{info.id}} EVENT</h4>
 					<div class="resultCity">
@@ -148,7 +147,7 @@
 					<div class="resultTable">
 						<p class="resultTableChild">{{info.game[0].game1}}</p>
 						<p class="resultTableChild">{{info.game[0].resultgame1}}</p>
-
+<br>
 						<p class="resultTableChild">{{info.game[0].game2}}</p>
 						<p class="resultTableChild">{{info.game[0].resultgame2}}</p>
 					</div>
@@ -207,6 +206,10 @@
 							<td class="tableTd">{{info.lost}}</td>
 						</tr>
 					</table>
+					<div class="flexButtonHomeResult">
+						<a v-on:click="showElement('index1')"><button class="buttonResult">BACK</button></a>
+						<a v-on:click="showElement('results')"><button class="buttonResult">RESULTS</button></a>
+					</div>
 				</main>
 			</div>
 			<!--..............................................		TEAM INFO-->
@@ -214,25 +217,22 @@
 				<main v-for="info in infoTeams" class="mainTicket">
 					<div class="cardInfoRobot">
 						<h3 class="subTitle">{{info.nameRobot}}</h3>
-						
-							<img class="card" v-bind:src="info.imgrobot">
-
-						
+						<img class="card" v-bind:src="info.imgrobot">
 						<div>
 							<div class="childInfo">
 								<div class="centerInfo">
 									<h4 class="subTitle">ROBOT INFO</h4>
-									<P>Robot: {{info.nameRobot}}</P>
-									<p>Type: {{info.type}}</p>
-									<p>Team: {{info.team}}</p>
-									<p>Hometown: {{info.hometown}}</p>
+									<P>Robot: <span class="spanTextWhite">{{info.nameRobot}}</span></P>
+									<p>Type: <span class="spanTextWhite">{{info.type}}</span></p>
+									<p>Team: <span class="spanTextWhite">{{info.team}}</span></p>
+									<p>Hometown: <span class="spanTextWhite">{{info.hometown}}</span></p>
 								</div>
 								<div class="centerInfo">
 									<h4 class="subTitle">BUILDER INFO</h4>
-									<p>Builder : {{info.ingBuilder}}</p>
-									<p>Years competing: {{info.years_competing}} years</p>
-									<p>Favourite tool : {{info.favourite_tool}}</p>
-									<p>Battery : {{info.battery}}</p>
+									<p>Builder : <span class="spanTextWhite">{{info.ingBuilder}}</span></p>
+									<p>Years competing: <span class="spanTextWhite">{{info.years_competing}}</span> years</p>
+									<p>Favourite tool : <span class="spanTextWhite">{{info.favourite_tool}}</span></p>
+									<p>Battery : <span class="spanTextWhite">{{info.battery}}</span></p>
 								</div>
 							</div>
 						</div>
@@ -250,6 +250,7 @@
 							<p><a v-on:click="showElement('teamInfo'), showTeam(info)"><button class="buttonTicket">VIEW</button></a></p>
 						</div>
 					</section>
+					<br>
 				</main>
 			</div>
 			<!--..............................................		TICKET-->
@@ -345,6 +346,5 @@
 			messagingSenderId: "421336331273"
 		};
 		firebase.initializeApp(config);
-
 	</script>
 	<script type="text/javascript" src="battleRobot.js"></script>

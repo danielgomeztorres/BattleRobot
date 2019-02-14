@@ -1,73 +1,91 @@
+/*ROBOT LEAGUE: CSS RESPONSIVE ORIENTATION LANDSCAPE*/
 body {
 	height: 100vh;
-	color: white;
-	overflow:auto;
+	color: #88D317;
+	overflow: auto;
 	margin: 0px;
-	font-family: 'Audiowide', cursive;	
+	font-family: 'Audiowide', cursive;
 }
+
+.spanTextWhite {
+	color: white;
+	text-decoration: none;
+	font-family: 'Audiowide', cursive;
+	display: flex;
+	justify-content: center;
+}
+
 span {
 	margin-right: 1%;
 }
+
 h1 {
 	margin: 0px;
 }
+
 .spanLeter {
 	font-size: 20px;
 }
+
 .background {
-	background-image: url(robotMedia/black-background-fondo.jpg);
+	background-image: linear-gradient(to top, #1A0315, #6E3667, #4b2046, #070507);
 	opacity: inherit;
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 100vh;
 	background-attachment: fixed;
 }
+
 .flexboxMain {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	margin-top: 10px;
 }
+
 .flexboxChild {
 	height: 100%;
 	width: 100%;
 }
+
 .sizePictures {
 	background-size: contain;
 	width: 950px;
 	height: 370px;
 }
+
 /*//////////////////HEADER TITLE, LOGIN AND TITLE FOR EACH PAG////////////*/
 .flexboxHeader {
 	margin-top: 10px;
 	display: flex;
 	justify-content: space-between;
 }
+
 .spanTitle {
-	color: red;
+	color: #6E3667;
 }
+
 .noLogin {
-	background-image: linear-gradient(to top, red ,#9e0808, #680a0a, #2a0404);
-	    display: flex;
-    justify-content: center;
+
+	display: flex;
+	justify-content: center;
 	text-align: center;
 	margin: 32%;
 	margin-top: 30%;
 	width: 200px;
 	height: 200px;
 	border-radius: 50%;
-	background-image: linear-gradient(to top, red ,#9e0808, #680a0a, #2a0404);
+	background-image: linear-gradient(to top, #1A0315, #6E3667, #4b2046, #070507);
 }
+
 .loginLogo {
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-end;
 	align-content: space-between;
 }
-.logo {
-	width: 35px;
-	height: 35px;
-}
+
+
 .title {
 	width: 100%;
 	font-family: 'Orbitron', sans-serif;
@@ -75,55 +93,71 @@ h1 {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-color: black;
- background-image: url(robotMedia/black-background-fondowhite.jpg);
-    padding-top: 4px;
-    padding-bottom: 4px;
+	color: #1A0315;
+	background-color: white;
+	padding-top: 4px;
+	padding-bottom: 4px;
 	border-bottom-left-radius: 50%;
-    border-bottom-right-radius: 50%;
+	border-bottom-right-radius: 50%;
 }
+
 .title1 {
 	font-family: 'Orbitron', sans-serif;
 	font-size: 19px;
 	text-decoration: underline;
-	text-decoration-color: red;
+	text-decoration-color: white;
+
 }
+
+
 .buttonLogin {
 	outline: 0;
 	border-radius: 50px;
 	display: inline-block;
+	border: solid 1px #6E3667;
 	color: white;
-		background-image: linear-gradient(to top, red ,#9e0808, #680a0a, #2a0404);
+	background-image: linear-gradient(to top, #1A0315, #6E3667, #4b2046, #070507);
 	text-align: center;
 	cursor: pointer;
 	font-size: 18px;
 }
+
 .subTitle {
 	display: flex;
 	justify-content: center;
 	text-decoration: underline;
-	text-decoration-color: red;
+	text-decoration-color: #6E3667;
 	font-family: 'Audiowide', cursive;
+	font-size: x-large;
 	margin: auto;
 	margin-bottom: 2%;
 }
+
 .loginDiv {
 	color: white;
 	display: flex;
 	justify-content: center;
 	text-decoration: underline;
-	text-decoration-color: red;
+	text-decoration-color: #6E3667;
 	font-family: 'Audiowide', cursive;
 	margin: auto;
 	margin-top: 25%;
 	margin-bottom: 2%;
 	width: 200px;
 	height: 200px;
+	border: solid 2px #6E3667;
 	border-radius: 50%;
-	background-image: linear-gradient(to top, red ,#9e0808, #680a0a, #2a0404);
+	background-image: linear-gradient(to top, #1A0315, #6E3667, #4b2046, #2a0404);
 }
+
+.indexImg {
+	width: 100%;
+}
+
 /*//////////////////////MENU///////////////*/
 /*OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO*/
+
+
 .hamburger {
 	background-color: #ffffff4a;
 	width: 60px;
@@ -131,27 +165,22 @@ color: black;
 	border-radius: 25%;
 	position: fixed;
 }
-a {
-	text-decoration: none;
-	color: #232323;
-	transition: color 0.3s ease;
-}
-a:hover {
-	color: tomato;
-}
+
 #menuToggle {
 	background-color: #111;
-    padding-top: 10px;
-    padding-right: 10px;
-    padding-left: 10px;
-	padding-bottom: 5px;
-    border-radius: 50%;
+	margin-left: 5px;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-left: 10px;
+	padding-bottom: 10px;
+	border-radius: 50%;
 	display: block;
 	position: fixed;
 	z-index: 1;
 	-webkit-user-select: none;
 	user-select: none;
 }
+
 #menuToggle input {
 	display: block;
 	width: 55px;
@@ -161,18 +190,18 @@ a:hover {
 	left: -5px;
 	cursor: pointer;
 	opacity: 0;
-	/* hide this */
 	z-index: 1;
-	/* and place it over the hamburger */
-/*	-webkit-touch-callout: none;*/
+	
 }
+
 #menuToggle span {
 	display: block;
 	width: 37px;
 	height: 5px;
 	margin-bottom: 5px;
 	position: relative;
-	background: red;
+	bottom: -2px;
+	background: #88D317;
 	border-radius: 15px;
 	z-index: 1;
 	transform-origin: 4px 0px;
@@ -180,34 +209,31 @@ a:hover {
 		background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
 		opacity 0.55s ease;
 }
+
 #menuToggle span:first-child {
 	transform-origin: 0% 0%;
 }
+
 #menuToggle span:nth-last-child(2) {
 	transform-origin: 0% 100%;
 }
-/* 
- * Transform all the slices of hamburger
- * into a crossmark.
- */
-#menuToggle input:checked ~ span {
+
+#menuToggle input:checked~span {
 	opacity: 1;
 	transform: rotate(45deg) translate(-2px, -1px);
-	background: red;
+	background: #88D317;
 }
-/*
- * But let's hide the middle one.
- */
-#menuToggle input:checked ~ span:nth-last-child(3) {
+
+
+#menuToggle input:checked~span:nth-last-child(3) {
 	opacity: 0;
 	transform: rotate(0deg) scale(0.2, 0.2);
 }
-/*
- * Ohyeah and the last one should go the other direction
- */
-#menuToggle input:checked ~ span:nth-last-child(2) {
+
+#menuToggle input:checked~span:nth-last-child(2) {
 	transform: rotate(-45deg) translate(0, -1px);
 }
+
 /*
  * Make this absolute positioned
  * at the top left of the screen
@@ -218,40 +244,42 @@ a:hover {
 	margin: -40px 0 0 -65px;
 	padding: 70px;
 	padding-top: 70px;
-	background: #ffffffe0;
+	background: #ffffff;
 	list-style-type: none;
 	transform-origin: 0% 0%;
 	transform: translate(-100%, 0);
 	transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
 	overflow: scroll;
 }
+
 #menu li {
 	padding: 3px 0;
 	font-size: 22px;
 	font-family: 'Orbitron', sans-serif;
 }
+
 #menu a {
-  display: block;
+	display: block;
 }
-/*
- * And let's slide it in from the left
- */
-#menuToggle input:checked ~ ul {
-	transform:translateX(20px);
+
+#menuToggle input:checked~ul {
+	transform: translateX(20px);
 }
+
 .buttonTeam {
-	border: none;
+	border: 1px solid white;
 	outline: 0;
 	border-radius: 50px;
 	display: inline-block;
 	padding: 20px;
-	color: white;
+	color: #88D317;
 	background-color: #000;
 	text-align: center;
 	cursor: pointer;
 	width: 50%;
 	font-size: 18px;
 }
+
 /*//////////////////////MENU///////////////*/
 /*OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO*/
 .card {
@@ -264,17 +292,20 @@ a:hover {
 	flex-direction: column;
 	min-width: 0;
 	word-wrap: break-word;
-	
+
 }
+
 .card::-webkit-scrollbar {
 	display: none;
 }
+
 .card--content img {
 	width: 100%;
 	height: 100%;
 }
-#menuToggle input:checked ~ ul {
-	transform:translateX(20px);
+
+#menuToggle input:checked~ul {
+	transform: translateX(20px);
 }
 
 /*//////////////////////EACHTEAM///////////////*/
@@ -288,145 +319,162 @@ a:hover {
 	border-radius: 10%;
 	margin-bottom: 2px;
 }
+
 .childInfo {
-		display: flex;
-		flex-direction: column;
-		justify-content: space-around;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
 	align-content: center;
 	border-radius: 10px;
-	    text-align: center;
-	}
+	text-align: center;
+}
+
 .centerInfo {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
 	align-content: center;
 }
+
 .cardInfoRobot {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	    align-items: center;
+	align-items: center;
 	border-radius: 10%;
 	background-color: #ffffff26;
 }
-.flexboxMainResult {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
-	margin-top: 2%;
-}
+
 /*//////////////////////CARD EVENT HOMEPAGE///////////////*/
 /*OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO*/
 .card {
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	box-shadow: 0 12px 12px 0 #4d1146;
 	max-width: 100%;
 	text-align: center;
 	font-family: arial;
+	margin: 5px;
 	border-radius: 10%;
 	margin-bottom: 10px;
 }
+
 .buttonTicket {
-	border: none;
+	border: 1px solid white;
+	margin-top: 10px;
 	outline: 0;
 	border-radius: 50px;
 	display: inline-block;
 	padding: 15px;
-	color: white;
-	background-image: linear-gradient(to top, #111 ,#181818, #2c2a2a, #111);
+	color: #88D317;
+	background-image: linear-gradient(to top, #111, #181818, #2c2a2a, #111);
 	text-align: center;
 	cursor: pointer;
 	width: 40%;
 	font-size: 18px;
 }
+
 a {
-	text-decoration: none;
+	text-decoration: underline;
+	text-decoration-color: #6E3667;
 	font-size: 22px;
 	color: black;
 }
-button:hover,
-a:hover {
-	opacity: 0.7;
-}
+
 /*//////////////////////TABLE///////////////*/
 /*OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO*/
 .table {
 	color: white;
 	width: 100%;
 }
+
 .tableTd {
 	padding: 4%;
 	text-align: center;
 }
-.tableTd2 {
-	background-image: url(robotMedia/medallasoro.png);
-}
+
 .tableTh {
 	background-color: black;
 	align-content: center;
 	font-family: 'Audiowide', cursive;
 }
+
 .trColor {
 	background-color: #000000b8;
 	align-content: center;
 	font-family: 'Audiowide', cursive;
 }
+
 /*//////////////////////BUTTON HOME///////////////*/
 /*OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO*/
 .buttonHome {
-	background-image: linear-gradient(to top, red ,#9e0808, #680a0a, #2a0404);
+	background-image: linear-gradient(to top, #1A0315, #40203c, #4b2046, #070507);
 	color: white;
 	padding: 25px;
+	border: solid 1px #070507;
 	border-radius: 25%;
 	font-family: 'Audiowide', cursive;
-	margin-bottom: 4px;
+	margin-bottom: 1px;
 }
+
 .flexButtonHome {
 	display: flex;
 	justify-content: space-around;
 	flex-wrap: wrap;
 	margin-top: 5%;
 }
+
 /*//////////////////////RESULTS///////////////*/
 /*OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO*/
 .flexboxMainResult {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	margin-top: 40px;
+	margin-top: 50px;
 }
+
 .flexButtonHomeResult {
-    display: flex;
-		margin-top: 5px;
-    justify-content: space-around;
-    flex-wrap: wrap;
+	display: flex;
+	margin-top: 5px;
+	justify-content: space-around;
+	flex-wrap: wrap;
 }
+
 .cityImg {
 	margin-right: 3%;
 	border-radius: 50%;
-	border-style: solid;
-	border-bottom-color: white;
+	border-bottom-color: #6E3667;
 	background-size: cover;
 	background-repeat: no-repeat;
-	height: 100px;
+	height: 150px;
 	width: 150px;
+	border: solid 2px #6E3667;
 }
+
 .resultCity {
+
+	border-bottom: none;
+
 	display: flex;
+	margin-left: 5px;
+	margin-right: 5px;
 	justify-content: center;
 	flex-wrap: wrap;
 	align-items: center;
-	border-radius: 25px;
-	margin-bottom: 2%;
+	background-color: #ffffff33;
+	padding-top: 10px;
+	padding-bottom: 5px;
+
 }
+
 .buttonResult {
-	background-image: linear-gradient(to top, red ,#9e0808, #680a0a, #2a0404);
+	background-image: linear-gradient(to top, #1A0315, #40203c, #4b2046, #070507);
 	color: white;
 	padding: 25px;
+	border: solid 1px #070507;
 	border-radius: 25%;
 	font-family: 'Audiowide', cursive;
 	margin-bottom: 1px;
 }
+
 .resultTable {
 	font-family: 'Audiowide', cursive;
 	display: flex;
@@ -434,11 +482,18 @@ a:hover {
 	flex-direction: column;
 	align-items: center;
 	background-color: #ffffff26;
-	border-radius: 25px;
+
+	margin-right: 5px;
+	margin-left: 5px;
+	border-bottom-left-radius: 25%;
+	border-bottom-right-radius: 25%
 }
+
 .resultTableChild {
-	margin-bottom: 10%;
+	margin-top: 0px;
+	margin-bottom: 2px;
 }
+
 /*//////////////////////PREVIOUS RESULT///////////////*/
 /*0000000000000000000000000000000000000000000000000000*/
 .cityImgPrevious {
@@ -451,32 +506,38 @@ a:hover {
 	height: 100px;
 	width: 150px;
 }
+
 /*//////////////////////TICKET///////////////*/
 /*OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO*/
 .mainTicket {
-		display: flex;
+	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	margin-top: 40px;
 	text-align: center;
-	}
+}
+
 .tableTicket {
 	padding-right: 150px;
 }
+
 .flexboxTicket {
-		display: flex;
-		flex-direction: column;
-		justify-content: space-around;
-		margin-top: 2%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	margin-top: 2%;
 }
+
 td {
 	margin: 5%;
 }
+
 /*//////////////////////EMAIL///////////////*/
 /*OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO*/
 .email {
 	color: coral;
 }
+
 /*//////////////////////INFO///////////////*/
 /*OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO*/
 .flexboxInfo {
@@ -485,15 +546,11 @@ td {
 	flex-direction: column;
 	margin: 5%;
 	background-color: #ffffff26;
-	border-radius: 10%;
+	border-radius: 2%;
 	padding: 5%;
 	padding-left: 8%;
 }
-.spanInfo {
-	color: white;
-	text-decoration: none;
-	font-family: 'Audiowide', cursive;
-}
+
 /*//////////////////////CHAT///////////////*/
 /*OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO*/
 .userImg {
@@ -501,6 +558,7 @@ td {
 	width: 25px;
 	height: 25px;
 }
+
 .chatFlexbox {
 	font-family: 'Audiowide', cursive;
 	display: flex;
@@ -509,6 +567,7 @@ td {
 	margin-top: 10px;
 	border-radius: 25px;
 }
+
 .box {
 	align-content: center;
 	overflow: scroll;
@@ -518,34 +577,42 @@ td {
 	width: 98%;
 	height: 400px;
 }
+
 .chat {
 	margin: 1%;
 	display: flex;
-	justify-content:center;
+	justify-content: center;
 	flex-direction: column;
 	align-content: center;
 }
+
 .inputs {
 	display: flex;
 	padding: 10%;
 }
+
 .input {
 	width: 100%;
 	padding: 15px;
 	border-radius: 25px;
-margin-right: 5%;
+	margin-right: 5%;
 }
+
 .buttonChat {
-	background-color: red;
+	background-color: #6E3667;
 	color: white;
+	border: solid 1px;
 	padding: 10px;
 	border-radius: 25%;
 	font-family: 'Audiowide', cursive;
 	margin-bottom: 4px;
 }
+
+/*0000000000000000000000000000000000000000000000000000000*/
 /*0000000000000000000000000000000000000000000000000000000*/
 /*//////////////////////MEDIA QUERY///////////////*/
 /*OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO*/
+/*0000000000000000000000000000000000000000000000000000000*/
 @media (orientation: landscape) {
 	.flexboxMainResult {
 		display: flex;
@@ -553,21 +620,25 @@ margin-right: 5%;
 		justify-content: space-around;
 		margin-top: 2%;
 	}
+
 	.resultPlace {
 		margin: 3px;
 	}
+
 	.flexboxMainTeam {
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
 		margin-top: 40px;
 	}
+
 	.flexboxTicket {
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
 		margin-top: 40px;
 	}
+
 	.cardTeamImg {
 		background-image: url(teams/Bronco-Bot-S2018-1140x763.jpg);
 		background-size: cover;
@@ -578,84 +649,90 @@ margin-right: 5%;
 		border-radius: 10%;
 		margin-bottom: 2px;
 	}
+
 	.childInfo {
 		display: flex;
 		flex-direction: row;
 		justify-content: space-around;
 	}
+
 	.cardInfoRobot {
 		width: 100%;
 		height: 100%;
 		border-radius: 10%;
-	display: flex;
-	min-width: 100%;
-	min-height: 200px;
-	overflow-x: auto;
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	min-width: 0;
-	word-wrap: break-word;
-	background-color: position: relative;
-	display: flex;
-	flex-direction: column;
-	min-width: 0;
-	word-wrap: break-word;
-	background-color: #ffffff26;
-	background-clip: border-box;
-	border: $card-border-width solid $card-border-color;
-	@include border-radius($card-border-radius);
-	
-	background-clip: border-box;
-	border: $card-border-width solid $card-border-color;
-	@include border-radius($card-border-radius);
-}
+		display: flex;
+		min-width: 100%;
+		min-height: 200px;
+		overflow-x: auto;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		min-width: 0;
+		word-wrap: break-word;
+		background-color: position relative;
+		display: flex;
+		flex-direction: column;
+		min-width: 0;
+		word-wrap: break-word;
+		background-color: #ffffff26;
+		background-clip: border-box;
+
+	}
+
 	.flexboxTicket {
 		display: flex;
 		flex-direction: row;
 		justify-content: space-around;
 		margin-top: 2%;
 	}
+
 	.mainTicket {
 		display: flex;
-	flex-direction: row;
-	justify-content: space-between;
+		flex-direction: row;
+		justify-content: space-between;
 	}
-.tableTicket {
-	padding-right: 150px;
-}
+
+	.tableTicket {
+		padding-right: 150px;
+	}
+
 	.buttonResult {
-	background-color: red;
-	color: white;
-	border-radius: 25%;
-	font-family: 'Audiowide', cursive;
-	margin-bottom: 1px;
-}
-	.flexButtonHomeResult {
-    display: flex;
-		flex-direction: column-reverse;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-	.cardInfoRobot {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border-radius: 10%;
-    background-color: #ffffff26;
+		background-color: red;
+		color: white;
+		border-radius: 25%;
+		font-family: 'Audiowide', cursive;
+		margin-bottom: 1px;
 	}
+
+	.flexButtonHomeResult {
+		display: flex;
+		flex-direction: column-reverse;
+		justify-content: space-around;
+		flex-wrap: wrap;
+	}
+
+	.cardInfoRobot {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		border-radius: 10%;
+		background-color: #ffffff26;
+	}
+
 	.centerInfo {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
-	align-content: center;
-}
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-content: center;
+	}
+
 	p {
 		margin: 10px;
 	}
-	#menuToggle input:checked ~ span {
-    opacity: 1;
-    transform: rotate(45deg) translate(-2px, -1px);
-    background: #111;
-}
+
+	#menuToggle input:checked~span {
+		opacity: 1;
+		transform: rotate(45deg) translate(-2px, -1px);
+		background: #111;
+	}
 }

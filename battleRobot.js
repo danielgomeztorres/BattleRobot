@@ -23,11 +23,6 @@ var app = new Vue({
 				app.arrayMatchs = app.matchs();
 				app.tableWin = app.calculateWin();
 
-				console.log(app.robotLeague);
-				console.log(app.tableTeams);
-				console.log(app.tableWin);
-				console.log(app.infoTeams);
-
 			})
 		},
 
@@ -49,7 +44,7 @@ var app = new Vue({
 			document.getElementById("closeIcon").checked = false
 
 		},
-	
+
 		//...........TEAMS NEW OBJECT.......//
 
 		table: function () { //.......PUT  ALL TEAMS IN ARRAY//
@@ -85,20 +80,20 @@ var app = new Vue({
 
 		logins: function () {
 			var provider = new firebase.auth.GoogleAuthProvider();
-			// How to Log In
-			firebase.auth().signInWithPopup(provider).then(function(){
+
+			firebase.auth().signInWithPopup(provider).then(function () {
 				console.log("login");
 				app.login = false;
 				app.logout = true;
 			});
-		
+
 		},
 		logouts: function () {
 			firebase.auth().signOut().then(function () {
 				alert("Sign-out successful.")
 
 			}, function (error) {
-			
+
 			});
 			this.logout = false;
 			this.login = true;
@@ -113,11 +108,11 @@ var app = new Vue({
 				username: name,
 			};
 			textInput = document.getElementById("textInput").value = "";
-			console.log(message);
-			// Get a key for a new Post.
+
+
 			firebase.database().ref('myChat').push(message);
-			//Write data
-			console.log("write");
+
+
 			this.getPosts();
 		},
 		getPosts: function () {
@@ -138,7 +133,7 @@ var app = new Vue({
 					posts.append(chatBox);
 				}
 			})
-			console.log("getting posts");
+
 		}
 	},
 	computed: {
@@ -157,4 +152,3 @@ var app = new Vue({
 
 	}
 });
-
