@@ -7,6 +7,7 @@ var app = new Vue({
 		arrayMatchs: [],
 		infoTeams: [],
 		tableWin: [],
+		setImg: [],
 		login: true,
 		logout: false,
 		main: false
@@ -14,7 +15,7 @@ var app = new Vue({
 	},
 	methods: {
 		fetchStart: function () {
-			fetch("https://api.jsonbin.io/b/5bf35541746e9b593ebfd094", {}).then(function (data) {
+			fetch("https://api.jsonbin.io/b/5c697e6cad5128320aff0e23", {}).then(function (data) {
 				return data.json();
 			}).then(function (myData) {
 				console.log(myData);
@@ -22,16 +23,37 @@ var app = new Vue({
 				app.tableTeams = app.table();
 				app.arrayMatchs = app.matchs();
 				app.tableWin = app.calculateWin();
+				console.log("foto1")
+				app.startTime();
+				
 
 			})
 		},
+		startTime: function () {
+			
+			var objImage = {
+				img1:"https://www.realityblurred.com/realitytv/images/2018/02/battlebots-discovery-science.jpg",
+				img2: "http://jhdgroup.net/wp-content/uploads/2015/08/port-battlebots3.jpg"
+			}
+			var tDate = new Date();
+			if (tDate.getSeconds() % 5 == 0) {
+				var img = document.getElementById("img1");
+				if(img.getAttribute("src") == objImage.img1){
+					img.setAttribute("src", objImage.img2);
+				}else{
+					img.setAttribute("src", objImage.img1);
+				}
+			}
+			setTimeout("app.startTime()", 1000);
+			console.log("foto2")
+		},
+
 
 		showTeam: function (value) {
 			this.infoTeams = [];
 			this.infoTeams.push(value);
 		},
 		//...........SHOW ELEMENTS.........//
-
 
 		showElement: function (id) {
 			this.page = id;
@@ -141,14 +163,43 @@ var app = new Vue({
 			return this.tableTeams.sort((a, b) => {
 				return b.winRate - a.winRate;
 			});
-		}
+		},
+		
 	},
 	created: function () {
-		this.fetchStart(),
-			this.getPosts(),
-			this.writeNewPost(),
-			this.login(),
-			this.changeClass()
+		this.fetchStart()
+			// this.getPosts(),
+			// this.writeNewPost(),
+			// this.login(),
+			// this.changeClass()
+			
 
 	}
 });
+// var timerid = 0;
+// var images = new Array(
+
+// 	"https://www.realityblurred.com/realitytv/images/2018/02/battlebots-discovery-science.jpg",
+// 	"http://jhdgroup.net/wp-content/uploads/2015/08/port-battlebots3.jpg"
+// )
+
+// console.log(images)
+// var countimages = 0;
+
+// function startTime() {
+// 	if (timerid) {
+// 		timerid = 0;
+// 	}
+// 	var tDate = new Date();
+
+// 	if (countimages == images.length) {
+// 		countimages = 0;
+// 	}
+// 	if (tDate.getSeconds() % 5 == 0) {
+// 		document.getElementById("img1").src = images[countimages];
+// 	}
+// 	countimages++;
+
+// 	timerid = setTimeout("startTime()", 1000);
+// }
+// startTime();

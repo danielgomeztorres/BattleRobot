@@ -68,7 +68,7 @@
  				},
  				{
  					"id": "5",
- 					"nameRobot": "HyperShock",
+ 					"nameRobot": "H.Shock",
  					"type": "Drum spinner",
  					"team": "London Robots",
  					"hometown": "U.K",
@@ -185,6 +185,7 @@
  					"child": "Free"
 				}
 			]
+			
  	}
  			]
  }

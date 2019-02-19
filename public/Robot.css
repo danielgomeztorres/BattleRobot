@@ -40,7 +40,7 @@ h1 {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	margin-top: 10px;
+	margin-top: 30px;
 }
 
 .flexboxChild {
@@ -75,7 +75,7 @@ h1 {
 	width: 200px;
 	height: 200px;
 	border-radius: 50%;
-	background-image: linear-gradient(to top, #1A0315, #6E3667, #4b2046, #070507);
+	background-image: linear-gradient(to top, #6E3667, #40203c, #4b2046, #6E3667);
 }
 
 .loginLogo {
@@ -102,6 +102,7 @@ h1 {
 }
 
 .title1 {
+	text-align: center;
 	font-family: 'Orbitron', sans-serif;
 	font-size: 19px;
 	text-decoration: underline;
@@ -116,7 +117,7 @@ h1 {
 	display: inline-block;
 	border: solid 1px #6E3667;
 	color: white;
-	background-image: linear-gradient(to top, #1A0315, #6E3667, #4b2046, #070507);
+	background-image: linear-gradient(to top, #6E3667, #40203c, #4b2046, #6E3667);
 	text-align: center;
 	cursor: pointer;
 	font-size: 18px;
@@ -147,11 +148,12 @@ h1 {
 	height: 200px;
 	border: solid 2px #6E3667;
 	border-radius: 50%;
-	background-image: linear-gradient(to top, #1A0315, #6E3667, #4b2046, #2a0404);
+	background-image: linear-gradient(to top, #6E3667, #40203c, #4b2046, #6E3667);
 }
 
 .indexImg {
 	width: 100%;
+	height: 195px;
 }
 
 /*//////////////////////MENU///////////////*/
@@ -167,7 +169,6 @@ h1 {
 }
 
 #menuToggle {
-	background-color: #111;
 	margin-left: 5px;
 	padding-top: 10px;
 	padding-right: 10px;
@@ -191,7 +192,7 @@ h1 {
 	cursor: pointer;
 	opacity: 0;
 	z-index: 1;
-	
+
 }
 
 #menuToggle span {
@@ -282,18 +283,6 @@ h1 {
 
 /*//////////////////////MENU///////////////*/
 /*OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO*/
-.card {
-	display: flex;
-	min-width: 100%;
-	min-height: 200px;
-	overflow-x: auto;
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	min-width: 0;
-	word-wrap: break-word;
-
-}
 
 .card::-webkit-scrollbar {
 	display: none;
@@ -341,29 +330,53 @@ h1 {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	border-radius: 10%;
+	border-radius: 10px;
+	margin-left: 15px;
+	margin-right: 15px;
 	background-color: #ffffff26;
 }
+
+.nameRobot {
+	color: #88D317;
+	font-size: 22px;
+	font-family: 'Orbitron', sans-serif;
+	margin: none;
+}
+
+.nameRobot1 {
+
+	margin: 1%;
+}
+.imgTeams {
+	width: 100%;
+	height: 100%;
+}
+
 
 /*//////////////////////CARD EVENT HOMEPAGE///////////////*/
 /*OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO*/
 .card {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	min-width: 100%;
+	min-height: 200px;
+	overflow-x: auto;
+	min-width: 0;
+	word-wrap: break-word;
 	box-shadow: 0 12px 12px 0 #4d1146;
 	max-width: 100%;
 	text-align: center;
 	font-family: arial;
-	margin: 5px;
-	border-radius: 10%;
-	margin-bottom: 10px;
+
+	margin-bottom: 60px;
 }
 
 .buttonTicket {
-	border: 1px solid white;
-	margin-top: 10px;
-	outline: 0;
+	border: 1px solid #111;
 	border-radius: 50px;
 	display: inline-block;
-	padding: 15px;
+	padding: 10px;
 	color: #88D317;
 	background-image: linear-gradient(to top, #111, #181818, #2c2a2a, #111);
 	text-align: center;
@@ -382,6 +395,7 @@ a {
 /*//////////////////////TABLE///////////////*/
 /*OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO*/
 .table {
+	margin-top: 15%;
 	color: white;
 	width: 100%;
 }
@@ -406,7 +420,7 @@ a {
 /*//////////////////////BUTTON HOME///////////////*/
 /*OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO*/
 .buttonHome {
-	background-image: linear-gradient(to top, #1A0315, #40203c, #4b2046, #070507);
+	background-image: linear-gradient(to top, #6E3667, #40203c, #4b2046, #6E3667);
 	color: white;
 	padding: 25px;
 	border: solid 1px #070507;
@@ -433,7 +447,7 @@ a {
 
 .flexButtonHomeResult {
 	display: flex;
-	margin-top: 5px;
+	margin-top: 15%;
 	justify-content: space-around;
 	flex-wrap: wrap;
 }
@@ -464,9 +478,12 @@ a {
 	padding-bottom: 5px;
 
 }
-
+.spanInfo {
+	color: white;
+	text-align: center;
+}
 .buttonResult {
-	background-image: linear-gradient(to top, #1A0315, #40203c, #4b2046, #070507);
+	background-image: linear-gradient(to top, #6E3667, #40203c, #4b2046, #6E3667);
 	color: white;
 	padding: 25px;
 	border: solid 1px #070507;
@@ -515,6 +532,10 @@ a {
 	justify-content: space-between;
 	margin-top: 40px;
 	text-align: center;
+}
+
+.ticketButton {
+	color: white;
 }
 
 .tableTicket {
@@ -614,6 +635,50 @@ td {
 /*OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO*/
 /*0000000000000000000000000000000000000000000000000000000*/
 @media (orientation: landscape) {
+/*INDEX*/
+.title1 {
+    text-align: center;
+    margin-left: 10px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 15px;
+    text-decoration: underline;
+    text-decoration-color: white;
+}
+.cardIndex {
+    display: flex;
+	
+	margin-bottom: 0px;
+    
+   
+}
+.indexImg {
+    width: 420px;
+    height: 195px;
+}
+.indexFlex  {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+p {
+     margin: 1px; 
+}
+.flexButtonHome {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 0%;
+}
+.flexboxMain {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 0px;
+}
+
+
+
+
 	.flexboxMainResult {
 		display: flex;
 		flex-direction: row;
@@ -639,6 +704,25 @@ td {
 		margin-top: 40px;
 	}
 
+	.landscapeTeams {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+
+	}
+
+	.flexboxTeam {
+		display: flex;
+		flex-direction: row;
+		width: 48%;
+		margin: 1%;
+	}
+	.imgTeams {
+		width: 100%;
+		height: 210px;
+	}
+
 	.cardTeamImg {
 		background-image: url(teams/Bronco-Bot-S2018-1140x763.jpg);
 		background-size: cover;
@@ -659,8 +743,10 @@ td {
 	.cardInfoRobot {
 		width: 100%;
 		height: 100%;
-		border-radius: 10%;
+		border-radius: 15px;
 		display: flex;
+		margin-left: 15px;
+		margin-right: 15px;
 		min-width: 100%;
 		min-height: 200px;
 		overflow-x: auto;
@@ -706,9 +792,10 @@ td {
 
 	.flexButtonHomeResult {
 		display: flex;
-		flex-direction: column-reverse;
+		flex-direction: row;
 		justify-content: space-around;
 		flex-wrap: wrap;
+		margin-top: 0px;
 	}
 
 	.cardInfoRobot {
@@ -726,9 +813,7 @@ td {
 		align-content: center;
 	}
 
-	p {
-		margin: 10px;
-	}
+	
 
 	#menuToggle input:checked~span {
 		opacity: 1;

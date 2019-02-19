@@ -7,6 +7,7 @@
 	<title>EUROPEAN BATTLE ROBOT</title>
 	<link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Orbitron:900" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link rel="shortcut icon" sizes="128x128" href="robotMedia/00ddb464-2546-4fc1-8c27-95de8a2dfce7.png">
 	<link rel="shortcut icon" sizes="196x196" href="robotMedia/00ddb464-2546-4fc1-8c27-95de8a2dfce7.png">
 	<link rel="apple-touch-icon" href="robotMedia/00ddb464-2546-4fc1-8c27-95de8a2dfce7.png">
@@ -17,6 +18,7 @@
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="Robot.css">
 </head>
 
@@ -31,7 +33,7 @@
 				<div>
 					<nav role="navigation">
 						<div id="menuToggle">
-							<!--						-->
+							
 							<label id="closeIcon"><input type="checkbox" />
 								<span></span>
 								<span></span>
@@ -60,11 +62,18 @@
 											</a>
 										</li>
 										<li>
-											<a v-on:click="showElement('teams')">EQUIPOS</a>
+											<a v-on:click="showElement('teams')">
+												TEAMS
+											</a>
 										</li>
 										<li>
 											<a v-on:click="showElement('ticket')">
 												TICKETS
+											</a>
+										</li>
+										<li>
+											<a v-on:click="showElement('chat')" target="_blank">
+												CHAT
 											</a>
 										</li>
 										<li>
@@ -74,8 +83,11 @@
 										</li>
 										<hr>
 										<li>
-											<a v-on:click="login">
+											<a v-show="login" id="login"  v-on:click="logins">
 												LOGIN
+											</a>
+											<a v-show="logout" id="logout"  v-on:click="logouts">
+												LOGOUT
 											</a>
 										</li>
 									</div>
@@ -84,28 +96,35 @@
 						</div>
 					</nav>
 				</div>
-				<div class="loginLogo">
+				<!-- <div class="loginLogo">
 					<button v-show="login" id="login" class="buttonLogin" v-on:click="logins">LOGIN</button>
 					<button v-show="logout" id="logout" class="buttonLogin" v-on:click="logouts">LOGOUT</button>
-				</div>
+				</div> -->
 			</header>
 			<!--..............................................		INDEX-->
 			<div v-show="page == 'index1'">
 				<main class="flexboxMain">
 					<div class="flexboxChild">
-						<div v-for="info in robotLeague" class="card">
-							<h2 class="title1">NEXT EVENT: {{info.matchs[info.matchs.length - 1].city}}
-								<img class="indexImg" src="robotMedia/port-battlebots3.jpg"></h2>
+						<div v-for="info in robotLeague" class="cardIndex" class="card">
+						
+							<h2 class="title1">NEXT EVENT: {{info.matchs[info.matchs.length - 1].city}} 
+								<img id="img1" class="indexImg" src="http://jhdgroup.net/wp-content/uploads/2015/08/port-battlebots3.jpg">
+							</h2>
+							<div class="indexFlex">
 							<p class="title1"> {{info.matchs[info.matchs.length - 1].id}} GAME OF BATTLE ROBOT </p>
-							<hr style="width:100%">
-							<p>{{info.matchs[info.matchs.length - 1].city}} | {{info.matchs[info.matchs.length - 1].date}}<a v-on:click="showElement('ticket')"><button
+							
+							<p class="spanInfo">{{info.matchs[info.matchs.length - 1].city}} | {{info.matchs[info.matchs.length - 1].date}}<a v-on:click="showElement('ticket')"><button
 									 class="buttonTicket">TICKET</button></a> </p>
+									</div>
 						</div>
 					</div>
 					<div class="flexButtonHome">
 						<a v-on:click="showElement('teams')"><button type="button" class="buttonHome">TEAMS</button></a>
 						<a v-on:click="showElement('results')"><button type="button" class="buttonHome">RESULT</button></a>
 						<a v-on:click="showElement('table')"><button type="button" role="alert" class="buttonHome">TABLE</button></a>
+						<a v-on:click="showElement('information')"><button type="button" class="buttonHome">INFO</button></a>
+						<a v-on:click="showElement('ticket')"><button type="button" class="buttonHome">TICKET</button></a>
+						<a v-on:click="showElement('contact')"><button type="button" role="alert" class="buttonHome">CONTACT</button></a>
 					</div>
 				</main>
 			</div>
@@ -152,7 +171,7 @@
 						<p class="resultTableChild">{{info.game[0].resultgame2}}</p>
 					</div>
 				</main>
-
+				<a v-on:click="showElement('index1')"><button class="buttonResult">BACK</button></a>
 			</div>
 			<!--..............................................		RESULT-->
 			<div v-show="page == 'results'">
@@ -166,6 +185,7 @@
 							<h3 class="cityName">{{info.matchs[info.matchs.length - 1].city}}</h3>
 							<p>{{info.matchs[info.matchs.length - 1].id}} EPISODE</p>
 							<h4>{{info.matchs[info.matchs.length - 1].date}}</h4>
+							<a class="ticketButton" v-on:click="showElement('ticket')">TICKET</a>
 						</div>
 					</div>
 					<div class="resultTable">
@@ -179,6 +199,7 @@
 						</div>
 					</div>
 					<div class="flexButtonHomeResult">
+					    <a v-on:click="showElement('index1')"><button class="buttonResult">BACK</button></a>
 						<a v-on:click="showElement('resultPrevious')"><button class="buttonResult">PREVIOUS</button></a>
 						<a v-on:click="showElement('chat')"><button class="buttonResult">CHAT</button></a>
 					</div>
@@ -187,15 +208,17 @@
 			<!--..............................................		TABLE-->
 			<div v-show="page == 'table'">
 				<h2 class="subTitle">CLASIFICATION</h2>
+				<i class="material-icons arrow_back">
+					</i>
 				<main class="flexboxMain">
 					<table class="table">
 						<tr>
 
 							<th class="tableTh">TEAM</th>
-							<th class="tableTh">EVENTS</th>
-							<th class="tableTh">RATE WIN</th>
-							<th class="tableTh">WIN</th>
-							<th class="tableTh">LOST</th>
+							<th class="tableTh">EV</th>
+							<th class="tableTh">R/WIN</th>
+							<th class="tableTh">W</th>
+							<th class="tableTh">L</th>
 						</tr>
 						<tr v-for="(info, index) in sorted_winrate" class="trColor">
 
@@ -217,6 +240,7 @@
 				<main v-for="info in infoTeams" class="mainTicket">
 					<div class="cardInfoRobot">
 						<h3 class="subTitle">{{info.nameRobot}}</h3>
+						<img id="slider">
 						<img class="card" v-bind:src="info.imgrobot">
 						<div>
 							<div class="childInfo">
@@ -230,7 +254,7 @@
 								<div class="centerInfo">
 									<h4 class="subTitle">BUILDER INFO</h4>
 									<p>Builder : <span class="spanTextWhite">{{info.ingBuilder}}</span></p>
-									<p>Years competing: <span class="spanTextWhite">{{info.years_competing}}</span> years</p>
+									<p>Years competing: <span class="spanTextWhite">{{info.years_competing}}</span></p>
 									<p>Favourite tool : <span class="spanTextWhite">{{info.favourite_tool}}</span></p>
 									<p>Battery : <span class="spanTextWhite">{{info.battery}}</span></p>
 								</div>
@@ -238,20 +262,22 @@
 						</div>
 					</div>
 				</main>
+				<a v-on:click="showElement('teams')"><button class="buttonResult">BACK</button></a>
 			</div>
 			<!--..............................................		TEAMS-->
 			<div v-show="page == 'teams'">
 				<h2 class="subTitle">TEAMS</h2>
+				<div class="landscapeTeams">
 				<main v-for="info in tableTeams" class="flexboxTeam">
 					<section>
 						<div class="card">
-							<img v-bind:src="info.imgteam" style="width:100%">
-							<h3 class="subTitle">{{info.nameRobot}}</h3>
-							<p><a v-on:click="showElement('teamInfo'), showTeam(info)"><button class="buttonTicket">VIEW</button></a></p>
+							<a v-on:click="showElement('teamInfo'), showTeam(info)"><img class="imgTeams" v-bind:src="info.imgteam"></a>
+							
+							<p class="nameRobot1"><a v-on:click="showElement('teamInfo'), showTeam(info)"><button class="buttonTicket">{{info.nameRobot}}</button></a></p>
 						</div>
 					</section>
 					<br>
-				</main>
+				</main></div>
 			</div>
 			<!--..............................................		TICKET-->
 			<div v-show="page == 'ticket'">
@@ -292,6 +318,7 @@
 								<td class="marginTable">{{info.price[0].child}}</td>
 							</tr>
 						</table>
+						
 					</div>
 				</main>
 			</div>
@@ -317,7 +344,7 @@
 			<!--..............................................		CHAT-->
 			<div v-show="page == 'chat'">
 				<h2 class="subTitle">CHAT</h2>
-				<button class="loginDiv" v-if="login" v-on:click="logins">LOGIN TO SEE THE PREVIOUS RESULTS
+				<button class="loginDiv" v-if="login" v-on:click="logins">LOGIN 
 					 
 				</button>
 				<div v-if="!login" class="chat">
